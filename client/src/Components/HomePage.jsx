@@ -77,7 +77,7 @@ export default function HomePage() {
                         <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
                             <img
                                 alt="App screenshot"
-                                src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+                                src="/deadfallroadScreenshot.png"
                                 width={2432}
                                 height={1442}
                                 className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
