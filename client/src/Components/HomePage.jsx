@@ -41,7 +41,7 @@ export default function HomePage() {
                         className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-accent to-primary opacity-30"
                     />
                 </div>
-                <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+                <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-20">
                     <div className="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
                         <div className="mt-24 sm:mt-32 lg:mt-16">
                             <a href="/projects" className="inline-flex space-x-6">
@@ -55,11 +55,10 @@ export default function HomePage() {
                             </a>
                         </div>
                         <h1 className="mt-10 text-pretty text-5xl font-semibold tracking-tight text-text sm:text-7xl">
-                            Deploy to the cloud with confidence
+                            i don't just build tech: i buildtechsys
                         </h1>
                         <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                            fugiat veniam occaecat.
+                            I'm a fullstack developer and technology consultant based in Texas, USA. Lets build tech, together.
                         </p>
                         <div className="mt-10 flex items-center gap-x-6">
                             <a

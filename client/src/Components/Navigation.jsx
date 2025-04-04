@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Home', href: '/', icon: HomeIcon },
   { name: 'About Derek', href: '/about', icon: UserIcon },
   { name: 'Projects', href: '/projects', icon: FolderIcon },
-  { name: 'Education', href: '/education', icon: AcademicCapIcon },
+  { name: 'Accolades', href: '/accolades', icon: AcademicCapIcon },
   { name: 'Contact', href: '/contact', icon: PaperAirplaneIcon },
 ];
 
@@ -68,7 +68,7 @@ export default function Layout() {
             className="h-8 w-auto ml-4"
           />
           </a>
-          <h1 className="text-white text-xl font-semibold ml-4 hidden sm:block"></h1>
+          <h1 className="text-white text-xl font-semibold ml-4 hidden sm:block">Derek Hopkins - Buildtech Systems</h1>
         </div>
         <div className="flex items-center gap-4">
           {/* You can add user profile, notifications, etc. here */}
