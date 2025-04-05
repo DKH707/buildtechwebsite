@@ -8,6 +8,7 @@ import NotFoundPage from './Components/NotFoundPage'
 import AboutPage from './Components/AboutPage'
 import ProjectsPage from './Components/ProjectsPage'
 import ContactPage from './Components/ContactPage'
+import ExperiencePage from './Components/Experience Page'
 
 const Layout = () => {
   return(
@@ -34,6 +35,7 @@ function App() {
                 <Route path='/' element={<HomePage/>}/>
                 <Route path='/about' element={<AboutPage/>}/>
                 <Route path='/projects' element={<ProjectsPage/>}/>
+                <Route path='/experience' element={<ExperiencePage/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>
                 </Route>
             </Routes>

@@ -49,14 +49,30 @@ export default function HomePage() {
                                     Projects
                                 </span>
                                 <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-300">
-                                    <span>Explore finished projects</span>
+                                    <span>Explore published projects</span>
                                     <ChevronRightIcon aria-hidden="true" className="size-5 text-gray-500" />
                                 </span>
                             </a>
                         </div>
-                        <h1 className="mt-10 text-pretty text-5xl font-semibold tracking-tight text-text sm:text-7xl">
-                            i don't just build tech: i buildtechsys
+                        <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
+                            I don't just build tech
                         </h1>
+                        <div className="relative mt-10">
+                            <div aria-hidden="true" className="absolute inset-0 flex items-center">
+                                <div className="w-full border-t border-gray-300" />
+                            </div>
+                            <div className="relative flex justify-center">
+                                <span className="bg-white px-2 text-sm text-gray-500"></span>
+                            </div>
+                        </div>
+                        <div className="inline-flex">
+                        <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
+                            I
+                        </h1>
+                        <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-primary sm:text-6xl">
+                            &nbsp;buildtechsys
+                        </h1>
+                        </div>
                         <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
                             I'm a fullstack developer and technology consultant based in Texas, USA. Lets build tech, together.
                         </p>
@@ -72,14 +88,14 @@ export default function HomePage() {
                             </a>
                         </div>
                     </div>
-                    <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+                    <div className="max-sm:hidden mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
                         <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
                             <img
                                 alt="App screenshot"
                                 src="/deadfallroadScreenshot.png"
                                 width={2432}
                                 height={1442}
-                                className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                                className="w-[76rem] rounded-xl bg-white/5 shadow-2xl ring-1 ring-white/10"
                             />
                         </div>
                     </div>
