@@ -1,4 +1,4 @@
-import { BuildingStorefrontIcon, HandRaisedIcon, ServerStackIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
+import{ AirplaneTakeoff, CalendarCheck, GithubLogo, VinylRecord} from '@phosphor-icons/react'
 import React from "react";
 
 export default function ProjectsPage() {
@@ -47,7 +47,7 @@ export default function ProjectsPage() {
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-gray-400 items-center inline-flex"><BuildingStorefrontIcon className="size-5"/>&nbsp;Deadfall Road</h3>
+                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><VinylRecord weight="duotone" size="24"/>&nbsp;Deadfall Road</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Fullstack E-Commerce Web App</p>
                                     <p className="mt-2 text-sm/6 text-gray-400">
                                         Web Application built for a Memphis, TN band to sell digital copies of their latest CDs. This application utilizes the MERN stack, Snipcart, and Vercel
@@ -65,7 +65,7 @@ export default function ProjectsPage() {
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-gray-400 items-center inline-flex"><ServerStackIcon className="size-5"/>&nbsp;Github</h3>
+                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><GithubLogo weight='duotone' size='24'/>&nbsp;Github</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Check out any of my public repositories</p>
                                     <p className="mt-2 text-sm/6 text-gray-400">
                                         Not everything I've done is showcased here, I've got more on my Github.
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
                                 />
                             </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-gray-400 items-center inline-flex"><HandRaisedIcon className="size-4"/>&nbsp;RSVP Web App</h3>
+                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><CalendarCheck weight='duotone' size="24"/>&nbsp;RSVP Web App</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Event App built with the MERN Stack</p>
                                     <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
                                         Web application utilized for my university graduation party, dsitributed via QR Code
@@ -101,7 +101,7 @@ export default function ProjectsPage() {
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-gray-400 items-center inline-flex"><Squares2X2Icon className="size-4"/>&nbsp;Kilroy Aviation, LLC</h3>
+                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><AirplaneTakeoff  weight='duotone' size='24'/>&nbsp;Kilroy Aviation, LLC</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Website for a recognized ODA of the FAA</p>
                                     <p className="mt-2 text-sm/6 text-gray-400">
                                         This site being my earliest production site, I built it in Squarespace. Still requires updating and meetings with the team occasionally.

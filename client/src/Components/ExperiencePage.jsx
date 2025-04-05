@@ -1,4 +1,4 @@
-import { BriefcaseIcon, ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
+import { CaretDoubleDown } from "@phosphor-icons/react";
 import React from "react";
 
 export default function ExperiencePage() {
@@ -89,39 +89,41 @@ export default function ExperiencePage() {
                         <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={0} />
                     </svg>
                 </div>
-                <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
-                    Academic<br />Experience
-                </p>
-                <div className="pt-24 pb-12 sm:py-32">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                            {academicTimeline.map((item) => (
-                                <div key={item.name}>
-                                    <time dateTime={item.dateTime} className="flex items-center text-sm/6 font-semibold text-accent">
-                                        <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 size-1 flex-none">
-                                            <circle r={2} cx={2} cy={2} fill="currentColor" />
-                                        </svg>
-                                        {item.date}
-                                        <div
-                                            aria-hidden="true"
-                                            className="absolute -ml-2 h-px w-screen -translate-x-full bg-primary/40 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
-                                        />
-                                    </time>
-                                    <p className="mt-6 text-lg/8 font-semibold tracking-tight text-text">{item.name}</p>
-                                    <p className="mt-1 text-base/7 text-gray-400">{item.description}</p>
+                <div className="relative h-[calc(100vh-20px)]">
+                    <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
+                        Academic<br />Experience
+                    </p>
+                    <div className="pt-24 sm:py-32">
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                                {academicTimeline.map((item) => (
+                                    <div key={item.name}>
+                                        <time dateTime={item.dateTime} className="flex items-center text-sm/6 font-semibold text-accent">
+                                            <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 size-1 flex-none">
+                                                <circle r={2} cx={2} cy={2} fill="currentColor" />
+                                            </svg>
+                                            {item.date}
+                                            <div
+                                                aria-hidden="true"
+                                                className="absolute -ml-2 h-px w-screen -translate-x-full bg-primary/40 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                                            />
+                                        </time>
+                                        <p className="mt-6 text-lg/8 font-semibold tracking-tight text-text">{item.name}</p>
+                                        <p className="mt-1 text-base/7 text-gray-400">{item.description}</p>
+                                    </div>
+                                ))}
+                                <div className="absolute bottom-40 left-1/2 right-1/2 -ml-[20px]">
+                                    <button
+                                        onClick={scrollToProfessional}
+                                        className="cursor-pointer hover:text-accent transition-colors"
+                                        aria-label="Scroll to Professional Experience"
+                                    >
+                                        <CaretDoubleDown size='2.5rem' className='animate-bounce' />
+                                    </button>
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="flex justify-center items-center pb-72">
-                    <button
-                        onClick={scrollToProfessional}
-                        className="cursor-pointer hover:text-accent transition-colors"
-                        aria-label="Scroll to Professional Experience"
-                    >
-                        <ChevronDoubleDownIcon className="animate-bounce size-10" />
-                    </button>
                 </div>
                 <p id="professional" className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
                     Professional<br />Experience
@@ -148,7 +150,7 @@ export default function ExperiencePage() {
                         </div>
                     </div>
                 </div>
-                <div className="hidden mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="relative overflow-hidden bg-gray-900 px-6 py-20 shadow-xl rounded-xl sm:rounded-xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
                         <img
                             alt=""

@@ -1,5 +1,4 @@
 import React from "react";
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
 export default function AboutPage() {
     return (
