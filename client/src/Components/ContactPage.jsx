@@ -4,21 +4,21 @@ import { AtSymbolIcon, CodeBracketSquareIcon, EnvelopeIcon, MinusIcon, PlusIcon 
 
 const faqs = [
     {
-        icon: <EnvelopeIcon className="size-4"/>,
+        icon: <EnvelopeIcon className="size-6"/>,
         question: "Email",
         answer:
             "dhopkins@buildtechsys.com",
         url: "mailto:dhopkins@buildtechsys.com"
     },
     {
-        icon: <CodeBracketSquareIcon className="size-4"/>,
+        icon: <CodeBracketSquareIcon className="size-6"/>,
         question: "Github",
         answer:
             "DKH707",
         url: "https://github.com/DKH707"
     },
     {
-        icon: <AtSymbolIcon className="size-4"/>,
+        icon: <AtSymbolIcon className="size-6"/>,
         question: "LinkedIn",
         answer:
             "Derek Hopkins (DKH707)",
@@ -46,7 +46,7 @@ export default function ContactPage() {
                 </div>
                 <div className="mx-auto text-center">
                     <h2 className="text-balance text-4xl font-semibold tracking-tight text-text sm:text-5xl">Contact Derek</h2>
-                    <p className="mt-2 text-lg/8 text-text">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
+                    <p className="mt-2 text-lg/8 text-text">Feel free to reach out if you'd like to talk about any projects or future opportunities</p>
                 </div>
                 <div className="mx-auto">
                     <div className="mx-auto max-w-4xl">
@@ -57,7 +57,7 @@ export default function ContactPage() {
                                         <DisclosureButton className="group flex w-full items-start justify-between text-left text-white">
                                             <div className='inline-flex gap-x-2 items-center'>
                                             {faq.icon}
-                                            <span className="text-base/7 font-semibold">{faq.question}</span>
+                                            <span className="text-3xl font-semibold">{faq.question}</span>
                                             </div>
                                             <span className="ml-6 flex h-7 items-center">
                                                 <PlusIcon aria-hidden="true" className="size-6 group-data-[open]:hidden" />
@@ -67,7 +67,7 @@ export default function ContactPage() {
                                     </dt>
                                     <DisclosurePanel as="dd" className="mt-4 text-left">
                                         <a href={faq.url} target="__blank">
-                                            <p className="text-base/7 text-gray-300">{faq.answer}</p>
+                                            <p className="text-2xl text-gray-300">{faq.answer}</p>
                                         </a>
                                     </DisclosurePanel>
                                 </Disclosure>

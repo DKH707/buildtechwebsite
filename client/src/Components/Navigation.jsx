@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import {
-  AcademicCapIcon,
   FolderIcon,
   HomeIcon,
   PaperAirplaneIcon,
   UserIcon,
   Bars3Icon,
   XMarkIcon,
+  BookOpenIcon,
+  ServerStackIcon,
 } from '@heroicons/react/24/outline';
 
 const navigation = [
   { name: 'Home', href: '/', icon: HomeIcon },
   { name: 'About Derek', href: '/about', icon: UserIcon },
-  { name: 'Projects', href: '/projects', icon: FolderIcon },
-  { name: 'Accolades', href: '/accolades', icon: AcademicCapIcon },
+  { name: 'Projects', href: '/projects', icon: ServerStackIcon },
+  { name: 'Experience', href: '/experience', icon: BookOpenIcon },
   { name: 'Contact', href: '/contact', icon: PaperAirplaneIcon },
 ];
 
@@ -23,8 +24,8 @@ function classNames(...classes) {
 }
 
 export default function Layout() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(!(window.innerWidth < 768));
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   // Handle responsive behavior
   useEffect(() => {
@@ -32,6 +33,9 @@ export default function Layout() {
       setIsMobile(window.innerWidth < 768);
       if (window.innerWidth < 768) {
         setSidebarOpen(false);
+      }
+      else {
+        setSidebarOpen(true)
       }
     };
 
@@ -52,7 +56,7 @@ export default function Layout() {
   return (
     <div className="flex h-screen flex-col bg-bground">
       {/* Top bar */}
-      <header className="bg-bground border-b border-gray-700 p-4 flex items-center justify-between z-10">
+      <header className="bg-bground border-b border-secondary p-4 flex items-center justify-between z-10">
         <div className="flex items-center">
           <button
             type="button"
@@ -68,7 +72,10 @@ export default function Layout() {
             className="h-8 w-auto ml-4"
           />
           </a>
-          <h1 className="text-white text-xl font-semibold ml-4 hidden sm:block">Derek Hopkins - Buildtech Systems</h1>
+          <div className='inline-flex'>
+            <h1 className="text-white text-xl font-semibold ml-4 hidden sm:block">Derek Hopkins</h1>
+            <h1 className="text-accent text-xl font-semibold hidden sm:block">&nbsp;Buildtech Systems</h1>
+          </div>
         </div>
         <div className="flex items-center gap-4">
           {/* You can add user profile, notifications, etc. here */}
@@ -79,7 +86,7 @@ export default function Layout() {
         {/* Sidebar navigation */}
         <aside
           className={classNames(
-            'bg-bground border-r border-gray-700 transition-all duration-300 ease-in-out z-10',
+            'bg-bground border-r border-secondary transition-all duration-300 ease-in-out z-10',
             sidebarOpen ? 'w-64' : 'w-0',
             isMobile ? 'fixed h-full' : 'relative'
           )}

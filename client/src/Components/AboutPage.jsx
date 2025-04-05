@@ -48,7 +48,7 @@ export default function AboutPage() {
                         <img
                             alt=""
                             src="/derek.jpg"
-                            className="w-[48rem] rounded-xl md:max-w-none bg-bground shadow-xl ring-1 ring-primary sm:w-[57rem]"
+                            className="w-[48rem] rounded-xl md:max-w-none bg-bground shadow-xl ring-1 ring-white/15 sm:w-[57rem]"
                         />
                     </div>
                     <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
