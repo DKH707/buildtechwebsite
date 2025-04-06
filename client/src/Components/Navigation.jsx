@@ -1,31 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import {
-  FolderIcon,
-  HomeIcon,
-  PaperAirplaneIcon,
-  UserIcon,
-  Bars3Icon,
-  XMarkIcon,
-  BookOpenIcon,
-  ServerStackIcon,
-} from '@heroicons/react/24/outline';
+import { BookOpenText, Database, HouseLine, List, PaperPlaneTilt, UserFocus, X } from '@phosphor-icons/react';
+import EspressoLoader from './EspressoLoader';
 
 const navigation = [
-  { name: 'Home', href: '/', icon: HomeIcon },
-  { name: 'About Derek', href: '/about', icon: UserIcon },
-  { name: 'Projects', href: '/projects', icon: ServerStackIcon },
-  { name: 'Experience', href: '/experience', icon: BookOpenIcon },
-  { name: 'Contact', href: '/contact', icon: PaperAirplaneIcon },
+  { name: 'Home', href: '/', icon: HouseLine },
+  { name: 'About Derek', href: '/about', icon: UserFocus },
+  { name: 'Projects', href: '/projects', icon: Database },
+  { name: 'Experience', href: '/experience', icon: BookOpenText },
+  { name: 'Contact', href: '/contact', icon: PaperPlaneTilt },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Layout() {
+export default function Navigation() {
   const [sidebarOpen, setSidebarOpen] = useState(!(window.innerWidth < 768));
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Handle responsive behavior
   useEffect(() => {
@@ -47,6 +40,15 @@ export default function Layout() {
     
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
+
+  }, []);
+
+  // Set loading to false when your content is ready
+  useEffect(() => {
+    // Example: simulate content loading
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   }, []);
 
   const toggleSidebar = () => {
@@ -63,7 +65,7 @@ export default function Layout() {
             className="text-white p-2 rounded-md hover:bg-accent"
             onClick={toggleSidebar}
           >
-            {sidebarOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+            {sidebarOpen ? <X size='1.5rem' weight='light'/> : <List size='1.5rem' weight='light'/>}
           </button>
           <a href="/">
           <img
@@ -144,9 +146,9 @@ export default function Layout() {
           'flex-1 overflow-y-auto transition-all duration-300 ease-in-out',
           sidebarOpen && !isMobile ? 'ml-0' : 'ml-0'
         )}>
-          <div className="content">
-            <Outlet />
-          </div>
+          {isLoading ? <EspressoLoader loading={isLoading}/> : <div className="content">
+              <Outlet />
+          </div>}
         </main>
       </div>
     </div>

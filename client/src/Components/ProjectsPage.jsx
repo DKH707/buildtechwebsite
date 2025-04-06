@@ -1,4 +1,4 @@
-import { BuildingStorefrontIcon, HandRaisedIcon, ServerStackIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
+import{ AirplaneTakeoff, CalendarCheck, GithubLogo, VinylRecord} from '@phosphor-icons/react'
 import React from "react";
 
 export default function ProjectsPage() {
@@ -43,11 +43,11 @@ export default function ProjectsPage() {
                                 <img
                                     alt=""
                                     src="/deadfallroadScreenshot2.png"
-                                    className="h-90 object-cover object-left border-b-white/15 border-b"
+                                    className="h-90 object-cover object-left border-b-white/15 saturate-0 hover:saturate-100 border-b"
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-gray-400 items-center inline-flex"><BuildingStorefrontIcon className="size-5"/>&nbsp;Deadfall Road</h3>
+                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><VinylRecord weight="duotone" size="24"/>&nbsp;Deadfall Road</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Fullstack E-Commerce Web App</p>
                                     <p className="mt-2 text-sm/6 text-gray-400">
                                         Web Application built for a Memphis, TN band to sell digital copies of their latest CDs. This application utilizes the MERN stack, Snipcart, and Vercel
@@ -61,11 +61,11 @@ export default function ProjectsPage() {
                                 <img
                                     alt=""
                                     src="/Github.png"
-                                    className="h-90 object-cover rounded-bl-2xl border-b-white/15 border-b border-l-white/15 border-l place-self-end"
+                                    className="h-90 object-cover rounded-bl-2xl border-b-white/15 border-b saturate-0 hover:saturate-100 border-l-white/15 border-l place-self-end"
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-gray-400 items-center inline-flex"><ServerStackIcon className="size-5"/>&nbsp;Github</h3>
+                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><GithubLogo weight='duotone' size='24'/>&nbsp;Github</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Check out any of my public repositories</p>
                                     <p className="mt-2 text-sm/6 text-gray-400">
                                         Not everything I've done is showcased here, I've got more on my Github.
@@ -79,11 +79,11 @@ export default function ProjectsPage() {
                                 <img
                                     alt=""
                                     src="/RSVP_collage.png"
-                                    className="h-80 rounded-br-2xl rounded-bl-2xl place-self-center border-b-white/15 border-b border-l-white/15 border-l border-r-white/15 border-r object-cover"
+                                    className="h-80 rounded-br-2xl rounded-bl-2xl place-self-center border-b-white/15 border-b saturate-0 hover:saturate-100 border-l-white/15 border-l border-r-white/15 border-r object-cover"
                                 />
                             </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-gray-400 items-center inline-flex"><HandRaisedIcon className="size-4"/>&nbsp;RSVP Web App</h3>
+                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><CalendarCheck weight='duotone' size="24"/>&nbsp;RSVP Web App</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Event App built with the MERN Stack</p>
                                     <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
                                         Web application utilized for my university graduation party, dsitributed via QR Code
@@ -97,11 +97,11 @@ export default function ProjectsPage() {
                                 <img
                                     alt=""
                                     src="/KilroyScreenshot.png"
-                                    className="h-90 object-cover object-right border-b-white/15 border-b"
+                                    className="h-90 object-cover object-right saturate-0 hover:saturate-100 border-b-white/15 border-b"
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-gray-400 items-center inline-flex"><Squares2X2Icon className="size-4"/>&nbsp;Kilroy Aviation, LLC</h3>
+                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><AirplaneTakeoff  weight='duotone' size='24'/>&nbsp;Kilroy Aviation, LLC</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Website for a recognized ODA of the FAA</p>
                                     <p className="mt-2 text-sm/6 text-gray-400">
                                         This site being my earliest production site, I built it in Squarespace. Still requires updating and meetings with the team occasionally.

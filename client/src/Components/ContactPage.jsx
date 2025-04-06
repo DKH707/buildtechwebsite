@@ -1,24 +1,24 @@
 import React from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { AtSymbolIcon, CodeBracketSquareIcon, EnvelopeIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { At, CaretDown, CaretUp, GithubLogo, LinkedinLogo } from '@phosphor-icons/react'
 
 const faqs = [
     {
-        icon: <EnvelopeIcon className="size-6"/>,
+        icon: <At size='1.5rem' weight='duotone'/>,
         question: "Email",
         answer:
             "dhopkins@buildtechsys.com",
         url: "mailto:dhopkins@buildtechsys.com"
     },
     {
-        icon: <CodeBracketSquareIcon className="size-6"/>,
+        icon: <GithubLogo size='1.5rem' weight='duotone'/>,
         question: "Github",
         answer:
             "DKH707",
         url: "https://github.com/DKH707"
     },
     {
-        icon: <AtSymbolIcon className="size-6"/>,
+        icon: <LinkedinLogo size='1.5rem' weight='duotone'/>,
         question: "LinkedIn",
         answer:
             "Derek Hopkins (DKH707)",
@@ -44,7 +44,7 @@ export default function ContactPage() {
                         className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-secondary to-primary opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
                     />
                 </div>
-                <div className="mx-auto text-center">
+                <div className="mx-auto px-6 lg:max-w-7xl lg:px-8">
                     <h2 className="text-balance text-4xl font-semibold tracking-tight text-text sm:text-5xl">Contact Derek</h2>
                     <p className="mt-2 text-lg/8 text-text">Feel free to reach out if you'd like to talk about any projects or future opportunities</p>
                 </div>
@@ -55,19 +55,19 @@ export default function ContactPage() {
                                 <Disclosure key={faq.question} as="div" className="py-6 first:pt-0 last:pb-0">
                                     <dt>
                                         <DisclosureButton className="group flex w-full items-start justify-between text-left text-white">
-                                            <div className='inline-flex gap-x-2 items-center'>
+                                            <div className='inline-flex gap-x-2 items-center text-accent'>
                                             {faq.icon}
                                             <span className="text-3xl font-semibold">{faq.question}</span>
                                             </div>
                                             <span className="ml-6 flex h-7 items-center">
-                                                <PlusIcon aria-hidden="true" className="size-6 group-data-[open]:hidden" />
-                                                <MinusIcon aria-hidden="true" className="size-6 group-[&:not([data-open])]:hidden" />
+                                                <CaretDown aria-hidden="true" size='1.5rem' className='group-data-[open]:hidden'/>
+                                                <CaretUp size='1.5rem' className='group-[&:not([data-open])]:hidden'/>
                                             </span>
                                         </DisclosureButton>
                                     </dt>
                                     <DisclosurePanel as="dd" className="mt-4 text-left">
                                         <a href={faq.url} target="__blank">
-                                            <p className="text-2xl text-gray-300">{faq.answer}</p>
+                                            <p className="text-2xl text-gray-300 hover:text-primary">{faq.answer}</p>
                                         </a>
                                     </DisclosurePanel>
                                 </Disclosure>

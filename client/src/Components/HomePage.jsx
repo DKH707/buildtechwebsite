@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { CaretRight } from "@phosphor-icons/react";
 
 export default function HomePage() {
     return (
@@ -41,16 +41,18 @@ export default function HomePage() {
                         className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-accent to-primary opacity-30"
                     />
                 </div>
-                <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-20">
+                <div className="mx-auto max-w-7xl px-6 sm:pb-32 max-sm:h-[calc(100vh-52px)] lg:flex lg:px-8 lg:py-20">
                     <div className="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
-                        <div className="mt-24 sm:mt-32 lg:mt-16">
-                            <a href="/projects" className="inline-flex space-x-6">
-                                <span className="rounded-full bg-primary/10 px-3 py-1 text-sm/6 font-semibold text-text ring-1 ring-inset ring-primary/20">
-                                    Projects
+                        <div className="mt-24 inline-flex space-x-6 sm:mt-32 lg:mt-16">
+                        <a href="/experience">
+                            <span className="rounded-full bg-primary/10 px-3 py-1 text-sm/6 font-semibold text-text hover:text-accent ring-1 ring-inset ring-primary/20">
+                                    Experience
                                 </span>
-                                <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-300">
+                            </a>
+                            <a href="/projects">
+                                <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-300 hover:text-accent">
                                     <span>Explore published projects</span>
-                                    <ChevronRightIcon aria-hidden="true" className="size-5 text-gray-500" />
+                                    <CaretRight aria-hidden="true" size='1rem' weight='regular' className=""/>
                                 </span>
                             </a>
                         </div>
@@ -83,7 +85,7 @@ export default function HomePage() {
                             >
                                 Contact Derek
                             </a>
-                            <a href="/about" className="text-sm/6 font-semibold text-text">
+                            <a href="/about" className="text-sm/6 font-semibold text-text hover:text-accent">
                                 Learn about him <span aria-hidden="true">→</span>
                             </a>
                         </div>
