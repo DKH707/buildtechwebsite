@@ -1,4 +1,4 @@
-# <img src="./client/public/RedLogo_noText.png" height="20"></img> Buildtech Systems - Derek Hopkins
+# <img src="./client/public/RedLogo_noText.png" height="25"></img> Buildtech Systems - Derek Hopkins
 
 <h3>I don't just build tech... I Buildtechsys</h3>
 
