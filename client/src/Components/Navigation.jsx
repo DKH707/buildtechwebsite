@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { BookOpenText, Database, HouseLine, List, PaperPlaneTilt, UserFocus, X } from '@phosphor-icons/react';
+import EspressoLoader from './EspressoLoader';
 
 const navigation = [
   { name: 'Home', href: '/', icon: HouseLine },
@@ -17,6 +18,7 @@ function classNames(...classes) {
 export default function Navigation() {
   const [sidebarOpen, setSidebarOpen] = useState(!(window.innerWidth < 768));
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Handle responsive behavior
   useEffect(() => {
@@ -38,6 +40,15 @@ export default function Navigation() {
     
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
+
+  }, []);
+
+  // Set loading to false when your content is ready
+  useEffect(() => {
+    // Example: simulate content loading
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   }, []);
 
   const toggleSidebar = () => {
@@ -135,9 +146,9 @@ export default function Navigation() {
           'flex-1 overflow-y-auto transition-all duration-300 ease-in-out',
           sidebarOpen && !isMobile ? 'ml-0' : 'ml-0'
         )}>
-          <div className="content">
+          {isLoading ? <EspressoLoader loading={isLoading}/> : <div className="content">
               <Outlet />
-          </div>
+          </div>}
         </main>
       </div>
     </div>
