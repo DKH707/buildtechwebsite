@@ -132,7 +132,7 @@ export default function Navigation() {
                   ))}
                 </ul>
               </li>
-              <li className="lg:mt-auto my-auto">
+              <li className="mt-auto max-sm:my-auto">
                 <img src='/derek_cropped.jpg' className='rounded-full size-20 mx-auto'></img>
                 <div className="text-xs text-gray-400 px-2 pt-4">
                   © 2025 Buildtech Systems
