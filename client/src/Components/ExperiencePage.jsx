@@ -1,6 +1,7 @@
-import { Atom, CaretDoubleDown, Database, FileCss, FileHtml, GithubLogo, HardDrive, HardDrives } from "@phosphor-icons/react";
+import { Atom, Briefcase, CaretDoubleDown, Database, FileCss, FileHtml, GithubLogo, HardDrive, HardDrives, Student } from "@phosphor-icons/react";
 import React from "react";
 import SkillsGrid from "./SkillsGrid";
+import Divider from "./Divider";
 
 export default function ExperiencePage() {
 
@@ -22,7 +23,7 @@ export default function ExperiencePage() {
         {
             name: 'Fullstack Development Intern',
             description:
-                'Worked at Collier Consulting and learned fullstack development by assiting in the modernization of an existing codebase',
+                'Worked at Collier Consulting and learned fullstack development by assisting in the modernization of an existing codebase',
             date: 'May 2023',
             dateTime: '2023-05',
         },
@@ -160,19 +161,19 @@ export default function ExperiencePage() {
                     </svg>
                 </div>
                 <div className="relative h-screen">
-                    <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
-                        Academic<br />Experience
+                    <p className="max-w-sm text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
+                        Academic<br /> Experience
                     </p>
+                    <div className="max-w-xs mx-auto pt-4">
+                        <Divider borderColor={'border-primary/75'} />
+                    </div>
                     <div className="pt-24 sm:py-32">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-2">
                                 {academicTimeline.map((item) => (
                                     <div key={item.name}>
                                         <time dateTime={item.dateTime} className="flex items-center text-sm/6 font-semibold text-accent">
-                                            <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 size-1 flex-none">
-                                                <circle r={2} cx={2} cy={2} fill="currentColor" />
-                                            </svg>
-                                            {item.date}
+                                            <Student />&nbsp;{item.date}
                                             <div
                                                 aria-hidden="true"
                                                 className="absolute -ml-2 h-px w-screen -translate-x-full bg-primary/40 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
@@ -195,20 +196,20 @@ export default function ExperiencePage() {
                         </div>
                     </div>
                 </div>
-                <div id="professional" className="relative lg:h-screen">
-                    <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
-                        Professional<br />Experience
+                <div id="professional" className="relative lg:h-screen max-sm:pb-40">
+                    <p className="max-w-sm text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
+                        Professional Experience
                     </p>
+                    <div className="max-w-xs mx-auto pt-4">
+                        <Divider borderColor={'border-primary/75'} />                    
+                    </div>
                     <div className="py-24 sm:py-32">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
                                 {professionalTimeline.map((item) => (
                                     <div key={item.name}>
                                         <time dateTime={item.dateTime} className="flex items-center text-sm/6 font-semibold text-accent">
-                                            <svg viewBox="0 0 4 4" aria-hidden="true" className="mr-4 size-1 flex-none">
-                                                <circle r={2} cx={2} cy={2} fill="currentColor" />
-                                            </svg>
-                                            {item.date}
+                                            <Briefcase />&nbsp;{item.date}
                                             <div
                                                 aria-hidden="true"
                                                 className="absolute -ml-2 h-px w-screen -translate-x-full bg-primary/40 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
@@ -218,7 +219,7 @@ export default function ExperiencePage() {
                                         <p className="mt-1 text-base/7 text-gray-400">{item.description}</p>
                                     </div>
                                 ))}
-                                <div className="absolute lg:bottom-16 bottom-0 left-1/2 right-1/2 -ml-[20px]">
+                                <div className="absolute lg:bottom-16 bottom-40 left-1/2 right-1/2 -ml-[20px]">
                                     <button
                                         onClick={scrollToSkills}
                                         className="cursor-pointer hover:text-accent transition-colors"
@@ -235,6 +236,9 @@ export default function ExperiencePage() {
                     <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
                         Specialized<br />Skills
                     </p>
+                    <div className="max-w-xs mx-auto pt-4">
+                        <Divider borderColor={'border-primary/75'} />                    
+                    </div>
                     <div className="py-24 sm:py-32">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <SkillsGrid skills={skills} />
