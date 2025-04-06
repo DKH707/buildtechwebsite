@@ -133,7 +133,7 @@ export default function ExperiencePage() {
 
     return (
         <>
-            <div className="relative isolate overflow-hidden bg-bground px-6 py-20 sm:py-20 lg:overflow-visible lg:px-0">
+            <div className="relative isolate overflow-hidden bg-bground px-6 py-1 sm:py-20 lg:overflow-visible lg:px-0">
                 <div className="absolute inset-0 -z-10 overflow-hidden">
                     <svg
                         aria-hidden="true"
