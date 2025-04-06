@@ -37,7 +37,7 @@ export default function Navigation() {
 
     // Add event listener
     window.addEventListener('resize', handleResize);
-    
+
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
 
@@ -65,14 +65,14 @@ export default function Navigation() {
             className="text-white p-2 rounded-md hover:bg-accent"
             onClick={toggleSidebar}
           >
-            {sidebarOpen ? <X size='1.5rem' weight='light'/> : <List size='1.5rem' weight='light'/>}
+            {sidebarOpen ? <X size='1.5rem' weight='light' /> : <List size='1.5rem' weight='light' />}
           </button>
           <a href="/">
-          <img
-            alt="Buildtech Systems"
-            src="/RedLogo_noText.png"
-            className="h-8 w-auto ml-4"
-          />
+            <img
+              alt="Buildtech Systems"
+              src="/RedLogo_noText.png"
+              className="h-8 w-auto ml-4"
+            />
           </a>
           <div className='inline-flex'>
             <h1 className="text-white text-xl font-semibold ml-4 hidden sm:block">Derek Hopkins</h1>
@@ -105,10 +105,10 @@ export default function Navigation() {
                     <li key={item.name}>
                       <NavLink
                         to={item.href}
-                        className={({ isActive }) => 
+                        className={({ isActive }) =>
                           classNames(
-                            isActive 
-                              ? 'bg-accent text-white' 
+                            isActive
+                              ? 'bg-accent text-white'
                               : 'text-white hover:bg-accent hover:text-white',
                             'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold'
                           )
@@ -132,8 +132,9 @@ export default function Navigation() {
                   ))}
                 </ul>
               </li>
-              <li className="mt-auto pt-6">
-                <div className="text-xs text-gray-400 px-2">
+              <li className="lg:mt-auto mt-96">
+                <img src='/derek_cropped.jpg' className='rounded-full size-20 mx-auto'></img>
+                <div className="text-xs text-gray-400 px-2 pt-4">
                   © 2025 Buildtech Systems
                 </div>
               </li>
@@ -146,8 +147,8 @@ export default function Navigation() {
           'flex-1 overflow-y-auto transition-all duration-300 ease-in-out',
           sidebarOpen && !isMobile ? 'ml-0' : 'ml-0'
         )}>
-          {isLoading ? <EspressoLoader loading={isLoading}/> : <div className="content">
-              <Outlet />
+          {isLoading ? <EspressoLoader loading={isLoading} /> : <div className="content">
+            <Outlet />
           </div>}
         </main>
       </div>

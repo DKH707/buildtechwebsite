@@ -46,7 +46,7 @@ export default function AboutPage() {
                     <div className="-ml-12 -mt-12 p-12 max-sm:w-dvw max-sm:ml-0 max-sm:pl-0 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                         <img
                             alt=""
-                            src="/derek.jpg"
+                            src="/derekpic.jpg"
                             className="w-[48rem] rounded-xl md:max-w-none bg-bground shadow-xl ring-1 ring-white/15 sm:w-[57rem]"
                         />
                     </div>
