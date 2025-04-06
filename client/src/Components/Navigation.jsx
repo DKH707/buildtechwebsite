@@ -76,7 +76,7 @@ export default function Navigation() {
           </a>
           <div className='inline-flex'>
             <h1 className="text-white text-xl font-semibold ml-4 hidden sm:block">Derek Hopkins</h1>
-            <h1 className="text-accent text-xl font-semibold hidden sm:block">&nbsp;Buildtech Systems</h1>
+            <h1 className="text-accent text-xl font-semibold sm:block">&nbsp;Buildtech Systems</h1>
           </div>
         </div>
         <div className="flex items-center gap-4">
@@ -132,7 +132,7 @@ export default function Navigation() {
                   ))}
                 </ul>
               </li>
-              <li className="lg:mt-auto mt-96">
+              <li className="lg:mt-auto my-auto">
                 <img src='/derek_cropped.jpg' className='rounded-full size-20 mx-auto'></img>
                 <div className="text-xs text-gray-400 px-2 pt-4">
                   © 2025 Buildtech Systems
