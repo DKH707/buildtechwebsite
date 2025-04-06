@@ -159,7 +159,7 @@ export default function ExperiencePage() {
                         <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={0} />
                     </svg>
                 </div>
-                <div className="relative h-[calc(100vh-20px)]">
+                <div className="relative h-screen">
                     <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
                         Academic<br />Experience
                     </p>
@@ -195,7 +195,7 @@ export default function ExperiencePage() {
                         </div>
                     </div>
                 </div>
-                <div id="professional" className="relative h-[calc(100vh-20px)]">
+                <div id="professional" className="relative lg:h-screen">
                     <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
                         Professional<br />Experience
                     </p>
@@ -218,11 +218,11 @@ export default function ExperiencePage() {
                                         <p className="mt-1 text-base/7 text-gray-400">{item.description}</p>
                                     </div>
                                 ))}
-                                <div className="absolute bottom-16 left-1/2 right-1/2 -ml-[20px]">
+                                <div className="absolute lg:bottom-16 bottom-0 left-1/2 right-1/2 -ml-[20px]">
                                     <button
                                         onClick={scrollToSkills}
                                         className="cursor-pointer hover:text-accent transition-colors"
-                                        aria-label="Scroll to Professional Experience"
+                                        aria-label="Scroll to Skills"
                                     >
                                         <CaretDoubleDown size='2.5rem' className='animate-bounce' />
                                     </button>
@@ -231,7 +231,7 @@ export default function ExperiencePage() {
                         </div>
                     </div>
                 </div>
-                <div id="skills" className="relative h-[calc(100vh-20px)]">
+                <div id="skills" className="relative lg:h-screen">
                     <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl inline-flex items-center">
                         Specialized<br />Skills
                     </p>

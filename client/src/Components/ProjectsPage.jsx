@@ -61,7 +61,7 @@ export default function ProjectsPage() {
                                 <img
                                     alt=""
                                     src="/Github.png"
-                                    className="h-90 object-cover rounded-bl-2xl border-b-white/15 border-b saturate-0 hover:saturate-100 border-l-white/15 border-l place-self-end"
+                                    className="h-90 object-cover rounded-bl-2xl border-b-white/15 border-b saturate-0 hover:saturate-100 border-l-white/15 border-l ml-auto"
                                 />
                                 </a>
                                 <div className="p-10">
@@ -79,7 +79,7 @@ export default function ProjectsPage() {
                                 <img
                                     alt=""
                                     src="/RSVP_collage.png"
-                                    className="h-80 rounded-br-2xl rounded-bl-2xl place-self-center border-b-white/15 border-b saturate-0 hover:saturate-100 border-l-white/15 border-l border-r-white/15 border-r object-cover"
+                                    className="h-80 rounded-br-2xl rounded-bl-2xl mx-auto border-b-white/15 border-b saturate-0 hover:saturate-100 border-l-white/15 border-l border-r-white/15 border-r object-cover"
                                 />
                             </a>
                                 <div className="p-10">

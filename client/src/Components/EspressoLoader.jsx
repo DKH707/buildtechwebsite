@@ -50,8 +50,8 @@ const EspressoLoader = ({ loading = true }) => {
     <div className="flex flex-col py-20 items-center justify-center w-full h-64">
       <div className="relative w-40 h-56">
         {/* Machine */}
-        <div className="absolute justify-items-center top-0 left-1/2 transform -translate-x-1/2 w-32 h-20 bg-white rounded-t-lg">
-            <img src='/RedLogo_noText.png' className='w-3/4 pt-4'></img>
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-20 bg-white rounded-t-lg">
+            <img src='/RedLogo_noText.png' className='w-3/4 pt-4 mx-auto'></img>
         </div>
         <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-20 h-4 bg-secondary"></div>
         
@@ -59,10 +59,10 @@ const EspressoLoader = ({ loading = true }) => {
         <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-gray-600 rounded-md"></div>
         
         {/* Coffee pour animation */}
-        {pourProgress > 0 && (
+        {pourProgress > 0 && cupFill < 100 && (
           <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-2 bg-amber-900 rounded-b-sm"
                style={{ height: `${Math.min(pourProgress / 4, 16)}px` }}>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-2 bg-amber-800 rounded-full opacity-75"></div>
+            <div className="absolute -bottom-14 left-1/2 transform -translate-x-1/2 -rotate-180 w-2 h-14 bg-amber-800 opacity-75"></div>
           </div>
         )}
         
