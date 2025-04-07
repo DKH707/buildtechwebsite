@@ -8,7 +8,7 @@ export default function CoffeePage() {
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedImage, setSelectedImage] = useState(null);
     const [totalPages, setTotalPages] = useState(0);
-    const { setIsLoading } = useLoadingContext();
+    const { isLoading, setIsLoading } = useLoadingContext();
     const imagesPerPage = 12; // More images per page for a nicer grid
     const allImageRefsRef = useRef([]);
     const cachedUrlsRef = useRef({});
@@ -29,7 +29,10 @@ export default function CoffeePage() {
             })
             .then((urls) => {
                 setImages(urls);
-                setIsLoading(false);
+                setTimeout(()=>{
+                    setIsLoading(false);
+                },3000)
+                
                 
                 // Preload next page
                 if (allImageRefsRef.current.length > imagesPerPage) {
@@ -100,8 +103,10 @@ export default function CoffeePage() {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold mb-6 text-text">Coffee Gallery</h1>
+        !isLoading && <div className="max-w-7xl mx-auto px-4 py-8">
+            <h1 className="text-3xl font-bold mb-3 text-text">Coffee Gallery</h1>
+            <p className="text-xl font-bold my-3 text-text">Check out some of the coffee I make in my freetime!</p>
+            <p className="text-lg font-semibold mb-3 text-text">Note: If gallery seems really slow, try disabling hardware acceleration in your browser</p>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 min-h-[600px]">
                 {images.map((url, index) => (
