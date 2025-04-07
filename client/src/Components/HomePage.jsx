@@ -4,15 +4,14 @@ import { useLoadingContext } from '../helpers/LoadingContext';
 
 export default function HomePage() {
 
-    const { setIsLoading } = useLoadingContext();
+    const { isLoading, setIsLoading } = useLoadingContext();
 
     useEffect(()=>{
         setTimeout(()=>{setIsLoading(false)},3000)
     },[setIsLoading])
 
     return (
-        <>
-            <div className="relative isolate overflow-hidden bg-bground">
+        !isLoading && <div className="relative isolate overflow-hidden bg-bground">
                 <svg
                     aria-hidden="true"
                     className="absolute inset-0 -z-10 size-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -111,6 +110,5 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
-        </>
     )
 }

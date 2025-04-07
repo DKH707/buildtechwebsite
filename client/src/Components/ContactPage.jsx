@@ -29,15 +29,14 @@ const faqs = [
 ]
 
 export default function ContactPage() {
-    const { setIsLoading } = useLoadingContext();
+    const { isLoading, setIsLoading } = useLoadingContext();
 
     useEffect(() => {
         setTimeout(() => { setIsLoading(false) }, 3000)
     }, [setIsLoading])
 
     return (
-        <>
-            <div className="isolate bg-bground px-6 py-20 sm:py-20">
+          !isLoading &&   <div className="isolate bg-bground px-6 py-20 sm:py-20">
                 <div
                     aria-hidden="true"
                     className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -82,6 +81,5 @@ export default function ContactPage() {
                     </div>
                 </div>
             </div>
-        </>
     )
 }
