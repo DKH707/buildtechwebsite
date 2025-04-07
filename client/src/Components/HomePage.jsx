@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CaretRight } from "@phosphor-icons/react";
+import { useLoadingContext } from '../helpers/LoadingContext';
 
 export default function HomePage() {
+
+    const { setIsLoading } = useLoadingContext();
+
+    useEffect(()=>{
+        setTimeout(()=>{setIsLoading(false)},3000)
+    },[setIsLoading])
+
     return (
         <>
             <div className="relative isolate overflow-hidden bg-bground">
@@ -44,15 +52,15 @@ export default function HomePage() {
                 <div className="mx-auto max-w-7xl px-6 sm:pb-32 max-sm:h-[calc(100vh-52px)] lg:flex lg:px-8 lg:py-20">
                     <div className="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
                         <div className="mt-24 inline-flex space-x-6 sm:mt-32 lg:mt-16">
-                        <a href="/experience">
-                            <span className="rounded-full bg-primary/10 px-3 py-1 text-sm/6 font-semibold text-text hover:text-accent ring-1 ring-inset ring-primary/20">
+                            <a href="/experience">
+                                <span className="rounded-full bg-primary/10 px-3 py-1 text-sm/6 font-semibold text-text hover:text-accent ring-1 ring-inset ring-primary/20">
                                     Experience
                                 </span>
                             </a>
                             <a href="/projects">
                                 <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-300 hover:text-accent">
                                     <span>Explore published projects</span>
-                                    <CaretRight aria-hidden="true" size='1rem' weight='regular' className=""/>
+                                    <CaretRight aria-hidden="true" size='1rem' weight='regular' className="" />
                                 </span>
                             </a>
                         </div>
@@ -68,12 +76,12 @@ export default function HomePage() {
                             </div>
                         </div>
                         <div className="inline-flex">
-                        <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
-                            I
-                        </h1>
-                        <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-primary sm:text-6xl">
-                            &nbsp;buildtechsys
-                        </h1>
+                            <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
+                                I
+                            </h1>
+                            <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-primary sm:text-6xl">
+                                &nbsp;buildtechsys
+                            </h1>
                         </div>
                         <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
                             I'm a fullstack developer and technology consultant based in Texas, USA. Lets build tech, together.

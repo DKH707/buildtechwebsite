@@ -101,7 +101,7 @@ const EspressoLoader = ({ loading = true }) => {
         )}
       </div>
       
-      <style jsx>{`
+      <style jsx="true">{`
         .animate-steam1 {
           animation: steam 3s infinite ease-out;
           animation-delay: 0.1s;

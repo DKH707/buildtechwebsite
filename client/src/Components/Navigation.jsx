@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { useLoadingContext } from '../helpers/LoadingContext.jsx';
 import { NavLink, Outlet } from 'react-router-dom';
-import { BookOpenText, Database, HouseLine, List, PaperPlaneTilt, UserFocus, X } from '@phosphor-icons/react';
+import { BookOpenText, Coffee, Database, HouseLine, List, PaperPlaneTilt, UserFocus, X } from '@phosphor-icons/react';
 import EspressoLoader from './EspressoLoader';
 
 const navigation = [
@@ -8,6 +9,7 @@ const navigation = [
   { name: 'About Derek', href: '/about', icon: UserFocus },
   { name: 'Projects', href: '/projects', icon: Database },
   { name: 'Experience', href: '/experience', icon: BookOpenText },
+  { name: 'Coffee', href: '/coffee', icon: Coffee },
   { name: 'Contact', href: '/contact', icon: PaperPlaneTilt },
 ];
 
@@ -18,7 +20,8 @@ function classNames(...classes) {
 export default function Navigation() {
   const [sidebarOpen, setSidebarOpen] = useState(!(window.innerWidth < 768));
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [isLoading, setIsLoading] = useState(true);
+
+  const { isLoading } = useLoadingContext();
 
   // Handle responsive behavior
   useEffect(() => {
@@ -41,14 +44,6 @@ export default function Navigation() {
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
 
-  }, []);
-
-  // Set loading to false when your content is ready
-  useEffect(() => {
-    // Example: simulate content loading
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
   }, []);
 
   const toggleSidebar = () => {
@@ -144,12 +139,46 @@ export default function Navigation() {
 
         {/* Main content area */}
         <main className={classNames(
-          'flex-1 overflow-y-auto transition-all duration-300 ease-in-out',
+          'flex-1 overflow-y-auto transition-all duration-300 ease-in-out relative',
           sidebarOpen && !isMobile ? 'ml-0' : 'ml-0'
         )}>
-          {isLoading ? <EspressoLoader loading={isLoading} /> : <div className="content">
+          {/* Always render the content */}
+          <div className="content">
             <Outlet />
-          </div>}
+          </div>
+
+          {/* Overlay the loader when loading */}
+          {isLoading && (
+            <div className="absolute inset-0 bg-bground z-50 flex">
+              <div className="absolute inset-0 -z-10 overflow-hidden">
+                    <svg
+                        aria-hidden="true"
+                        className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-white/10 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                    >
+                        <defs>
+                            <pattern
+                                x="50%"
+                                y={-1}
+                                id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+                                width={200}
+                                height={200}
+                                patternUnits="userSpaceOnUse"
+                            >
+                                <path d="M100 200V.5M.5 .5H200" fill="none" />
+                            </pattern>
+                        </defs>
+                        <svg x="50%" y={-1} className="overflow-visible fill-bground">
+                            <path
+                                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                                strokeWidth={0}
+                            />
+                        </svg>
+                        <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={0} />
+                    </svg>
+                </div>
+              <EspressoLoader loading={isLoading} />
+            </div>
+          )}
         </main>
       </div>
     </div>

@@ -1,10 +1,16 @@
+import React, {useEffect} from "react";
+import { useLoadingContext } from '../helpers/LoadingContext';
 import{ AirplaneTakeoff, CalendarCheck, GithubLogo, VinylRecord} from '@phosphor-icons/react'
-import React from "react";
 
 export default function ProjectsPage() {
+
+      const { setIsLoading } = useLoadingContext();
+    
+        useEffect(()=>{
+                setTimeout(()=>{setIsLoading(false)},3000)
+            },[setIsLoading])
+
     return (
-        <>
-        
         <div className="relative isolate overflow-hidden bg-bground px-6 py-20 sm:py-20 lg:overflow-visible lg:px-0">
                 <div className="absolute inset-0 -z-10 overflow-hidden">
                     <svg
@@ -112,6 +118,5 @@ export default function ProjectsPage() {
                     </div>
                 </div>
             </div>
-        </>
     )
 }
