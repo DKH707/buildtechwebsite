@@ -1,24 +1,25 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useLoadingContext } from '../helpers/LoadingContext';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { At, CaretDown, CaretUp, GithubLogo, LinkedinLogo } from '@phosphor-icons/react'
 
 const faqs = [
     {
-        icon: <At size='1.5rem' weight='duotone'/>,
+        icon: <At size='1.5rem' weight='duotone' />,
         question: "Email",
         answer:
             "dhopkins@buildtechsys.com",
         url: "mailto:dhopkins@buildtechsys.com"
     },
     {
-        icon: <GithubLogo size='1.5rem' weight='duotone'/>,
+        icon: <GithubLogo size='1.5rem' weight='duotone' />,
         question: "Github",
         answer:
             "DKH707",
         url: "https://github.com/DKH707"
     },
     {
-        icon: <LinkedinLogo size='1.5rem' weight='duotone'/>,
+        icon: <LinkedinLogo size='1.5rem' weight='duotone' />,
         question: "LinkedIn",
         answer:
             "Derek Hopkins (DKH707)",
@@ -28,6 +29,11 @@ const faqs = [
 ]
 
 export default function ContactPage() {
+    const { setIsLoading } = useLoadingContext();
+
+    useEffect(() => {
+        setTimeout(() => { setIsLoading(false) }, 3000)
+    }, [setIsLoading])
 
     return (
         <>
@@ -56,12 +62,12 @@ export default function ContactPage() {
                                     <dt>
                                         <DisclosureButton className="group flex w-full items-start justify-between text-left text-white">
                                             <div className='inline-flex gap-x-2 items-center text-accent'>
-                                            {faq.icon}
-                                            <span className="text-3xl font-semibold">{faq.question}</span>
+                                                {faq.icon}
+                                                <span className="text-3xl font-semibold">{faq.question}</span>
                                             </div>
                                             <span className="ml-6 flex h-7 items-center">
-                                                <CaretDown aria-hidden="true" size='1.5rem' className='group-data-[open]:hidden'/>
-                                                <CaretUp size='1.5rem' className='group-[&:not([data-open])]:hidden'/>
+                                                <CaretDown aria-hidden="true" size='1.5rem' className='group-data-[open]:hidden' />
+                                                <CaretUp size='1.5rem' className='group-[&:not([data-open])]:hidden' />
                                             </span>
                                         </DisclosureButton>
                                     </dt>

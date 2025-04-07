@@ -1,9 +1,17 @@
+import React, {useEffect} from "react";
+import { useLoadingContext } from '../helpers/LoadingContext';
 import { Atom, Briefcase, CaretDoubleDown, Database, FileCss, FileHtml, GithubLogo, HardDrive, HardDrives, Student } from "@phosphor-icons/react";
-import React from "react";
 import SkillsGrid from "./SkillsGrid";
 import Divider from "./Divider";
 
 export default function ExperiencePage() {
+
+    const { setIsLoading } = useLoadingContext();
+    
+        useEffect(()=>{
+                setTimeout(()=>{setIsLoading(false)},3000)
+            },[setIsLoading])
+    
 
     const professionalTimeline = [
         {
