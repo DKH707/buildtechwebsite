@@ -55,7 +55,7 @@ export default function CoffeePage() {
 
     return (
         !isLoading &&
-        <div className="py-20 max-w-7xl mx-auto absolute inset-0 bg-bground z-50">
+        <div className="relative isolate overflow-hidden bg-bground px-6 py-20 sm:py-20 lg:overflow-visible lg:px-0">
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <svg
                     aria-hidden="true"
@@ -84,9 +84,11 @@ export default function CoffeePage() {
             </div>
             <div>
                 <h1 className="text-3xl mb-5 text-text font-bold">Digital Espresso</h1>
-                <h1 className="text-2xl mb-5 text-accent font-semibold">A gallery of the fuel I make before/during development sessions </h1>
+                <h1 className="text-2xl mb-5 text-accent font-semibold">A gallery of the fuel I make before/during development sessions</h1>
             </div>
-            <Gallery images={images} columnCount={3} />
+            <div className='max-w-7xl mx-auto'>
+                <Gallery images={images} columnCount={3} />
+            </div>
         </div>
     );
 }
