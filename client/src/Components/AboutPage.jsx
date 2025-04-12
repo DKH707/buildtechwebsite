@@ -1,12 +1,35 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { useLoadingContext } from '../helpers/LoadingContext';
+import { initializeFirebase } from "../helpers/FirebaseInitialization";
+import { getStorage, getDownloadURL, ref} from "firebase/storage";
 
 export default function AboutPage() {
     const { isLoading, setIsLoading } = useLoadingContext();
+    const [isFetching, setIsFetching] = useState(false);
+    const storagePath = 'resume/websiteProdResume.pdf'
 
     useEffect(()=>{
+            initializeFirebase();
             setTimeout(()=>{setIsLoading(false)},3000)
         },[setIsLoading])
+
+    const handleGetResume = async() => {
+        setIsFetching(true)
+
+        const storage = getStorage();
+        const resumeRef = ref(storage, storagePath)
+
+        try {
+            const url = await getDownloadURL(resumeRef);
+            // Open the URL directly after getting it, not using state
+            window.open(url, '_blank');
+        } catch (err) {
+            console.error('Failed to fetch file from Firebase: ', err);
+        } finally {
+            setIsFetching(false);
+        }
+    }
+
 
     return (
     !isLoading && <div className="relative isolate overflow-hidden bg-bground px-6 py-20 sm:py-20 lg:overflow-visible lg:px-0">
@@ -53,8 +76,14 @@ export default function AboutPage() {
                         <img
                             alt=""
                             src="/derekpic.jpg"
-                            className="w-[48rem] rounded-xl md:max-w-none bg-bground shadow-xl ring-1 ring-white/15 sm:w-[57rem]"
+                            className="w-[48rem] mb-5 rounded-xl md:max-w-none bg-bground shadow-xl ring-1 ring-white/15 sm:w-[57rem]"
                         />
+                        <button
+                            type="button"
+                            className="ring-1 p-2 rounded-lg ring-primary ring-inset text-text transition-all duration-300 ease-in-out hover:bg-red-800/20 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                            onClick={handleGetResume}>
+                                {isFetching ? 'Getting resume. . . ' : 'View my résumé'}
+                        </button>
                     </div>
                     <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                         <div className="lg:pr-4">
