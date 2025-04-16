@@ -74,7 +74,7 @@ export default function ProjectsPage() {
                                     <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><GithubLogo weight='duotone' size='24'/>&nbsp;Github</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Check out any of my public repositories</p>
                                     <p className="mt-2 text-sm/6 text-gray-400">
-                                        Not everything I've done is showcased here, I've got more on my Github.
+                                        Not everything I've done is showcased here, I've got more on my Github
                                     </p>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ export default function ProjectsPage() {
                                     <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><CalendarCheck weight='duotone' size="24"/>&nbsp;RSVP Web App</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Event App built with the MERN Stack</p>
                                     <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
-                                        Web application utilized for my university graduation party, dsitributed via QR Code
+                                        Web application utilized for my university graduation party, distributed via QR Code
                                     </p>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ export default function ProjectsPage() {
                                     <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><AirplaneTakeoff  weight='duotone' size='24'/>&nbsp;Kilroy Aviation, LLC</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Website for a recognized ODA of the FAA</p>
                                     <p className="mt-2 text-sm/6 text-gray-400">
-                                        This site being my earliest production site, I built it in Squarespace. Still requires updating and meetings with the team occasionally.
+                                        This site being my earliest production site, I built it in Squarespace. Still requires updating and meetings with the team occasionally
                                     </p>
                                 </div>
                             </div>
