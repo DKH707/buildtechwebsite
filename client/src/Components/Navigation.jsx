@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useLoadingContext } from '../helpers/LoadingContext.jsx';
 import { NavLink, Outlet } from 'react-router-dom';
-import { BookOpenText, Coffee, Database, HouseLine, List, PaperPlaneTilt, UserFocus, X } from '@phosphor-icons/react';
+import { Database, HouseLine, List, PaperPlaneTilt, UserFocus, X } from '@phosphor-icons/react';
 import EspressoLoader from './EspressoLoader';
 
 const navigation = [
   { name: 'Home', href: '/', icon: HouseLine },
   { name: 'About Derek', href: '/about', icon: UserFocus },
   { name: 'Projects', href: '/projects', icon: Database },
-  { name: 'Experience', href: '/experience', icon: BookOpenText },
-  { name: 'Coffee', href: '/coffee', icon: Coffee },
   { name: 'Contact', href: '/contact', icon: PaperPlaneTilt },
 ];
 
