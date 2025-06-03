@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { CaretRight } from "@phosphor-icons/react";
 import { useLoadingContext } from '../helpers/LoadingContext';
 
 export default function HomePage() {
@@ -50,18 +49,18 @@ export default function HomePage() {
                 </div>
                 <div className="mx-auto max-w-7xl px-6 sm:pb-32 max-sm:h-[calc(100vh-52px)] lg:flex lg:px-8 lg:py-20">
                     <div className="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
-                        <div className="mt-24 inline-flex space-x-6 sm:mt-32 lg:mt-16">
-                            <a href="/experience">
-                                <span className="rounded-full bg-primary/10 px-3 py-1 text-sm/6 font-semibold text-text hover:text-accent ring-1 ring-inset ring-primary/20">
-                                    Experience
-                                </span>
-                            </a>
-                            <a href="/projects">
+                        <div className="mt-24 inline-flex space-x-6 sm:mt-32 lg:mt-16">      
+                          {/* <a href="/services">
+                          <span className="rounded-full bg-primary/10 px-3 py-1 text-sm/6 font-semibold text-text hover:text-accent ring-1 ring-inset ring-primary/20">
+                            Services
+                            </span>
+                          </a> */}
+                            {/* <a href="/projects">
                                 <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-300 hover:text-accent">
                                     <span>Explore published projects</span>
                                     <CaretRight aria-hidden="true" size='1rem' weight='regular' className="" />
                                 </span>
-                            </a>
+                            </a> */}
                         </div>
                         <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
                             I don't just build tech
@@ -83,18 +82,17 @@ export default function HomePage() {
                             </h1>
                         </div>
                         <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
-                            I'm a fullstack developer and technology consultant based in Texas, USA. Lets build tech, together.
-                        </p>
-                        <div className="mt-10 flex items-center gap-x-6">
+                          Web Apps | Mobile Apps | Tech Consulting                        </p>
+                        <div className="mt-10 flex items-center justify-center gap-x-6">
                             <a
                                 href="/contact"
-                                className="rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-text shadow-sm hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
+                                className="rounded-md bg-secondary px-3.5 py-2.5 text-md font-semibold text-text shadow-sm hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
                             >
-                                Contact Derek
+                                Let's work together!
                             </a>
-                            <a href="/about" className="text-sm/6 font-semibold text-text hover:text-accent">
-                                Learn about him <span aria-hidden="true">→</span>
-                            </a>
+                            {/* <a href="/about" className="text-sm/6 font-semibold text-text hover:text-accent">
+                                Learn about Derek <span aria-hidden="true">→</span>
+                            </a> */}
                         </div>
                     </div>
                     <div className="max-sm:hidden mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
