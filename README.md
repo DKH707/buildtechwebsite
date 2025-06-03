@@ -27,7 +27,7 @@ Buildtech Systems is my professional identity as a fullstack developer. This web
 - **Build Tool**: Vite 
 - **Styling**: Tailwind CSS (v3.14.7 for compatibility) and Tailwind UI/Plus
 - **Deployment**: Vercel for CI/CD as well as hosting
-- **Backend**: Coffee Gallery photos are stored in Firebase and called from the client
+- **Backend**: None, for simplicity
 
 ## Business Information
 
