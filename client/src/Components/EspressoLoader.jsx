@@ -60,7 +60,7 @@ const EspressoLoader = ({ loading = true }) => {
         
         {/* Coffee pour animation */}
         {pourProgress > 0 && cupFill < 100 && (
-          <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-2 bg-amber-900 rounded-b-sm"
+          <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-2 bg-amber-900"
                style={{ height: `${Math.min(pourProgress / 4, 16)}px` }}>
             <div className="absolute -bottom-14 left-1/2 transform -translate-x-1/2 -rotate-180 w-2 h-14 bg-amber-800 opacity-75"></div>
           </div>
