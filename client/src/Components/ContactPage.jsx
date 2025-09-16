@@ -5,7 +5,7 @@ import {
   GithubLogo,
   LinkedinLogo,
 } from "@phosphor-icons/react";
-
+import ContactForm from "./ContactForm";
 const faqs = [
   {
     icon: <At size="1.5rem" weight="duotone" />,
@@ -62,6 +62,7 @@ export default function ContactPage() {
           </p>
         </div>
         <div className="mx-auto">
+          <ContactForm/>
           <div className="mx-auto max-w-4xl">
             <dl className="mt-16 divide-y divide-white/10">
               {faqs.map((faq) => (
