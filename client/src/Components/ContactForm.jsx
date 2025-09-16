@@ -16,8 +16,8 @@ export default function ContactForm() {
         />
         <label className="text-2xl">Subject:</label>
         <input
-        required
-        placeholder="Project Idea"
+          required
+          placeholder="Project Idea"
           className="text-2xl border bg-bground border-gray-300 rounded-md px-4 py-2"
           type="subject"
           name="subject"
@@ -30,7 +30,7 @@ export default function ContactForm() {
           name="message"
         ></textarea>
         <input type="text" name="_gotcha" className="hidden" />
-        <div/>
+        <div />
         <button
           className="mx-auto rounded-md bg-secondary px-6 py-2.5 text-md font-semibold text-text shadow-sm hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
           type="submit"
