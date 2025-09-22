@@ -69,7 +69,7 @@ export default function Navigation() {
           </a>
           <div className='inline-flex'>
             <h1 className="text-white text-xl font-semibold ml-4 hidden sm:block">Buildtech</h1>
-            <h1 className="text-accent text-xl font-semibold sm:block">&nbsp;Systems</h1>
+            <h1 className="text-accent text-xl font-semibold hidden sm:block">&nbsp;Systems</h1>
           </div>
         </div>
         <div className="flex items-center gap-4">
