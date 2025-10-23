@@ -1,9 +1,13 @@
-import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { createServer } from 'http';
+import handler from 'serve-handler';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Detect environment
+const isProduction = process.env.VERCEL || process.env.NODE_ENV === 'production';
 
 // List your routes here
 const routes = [
@@ -16,20 +20,47 @@ const routes = [
 async function prerender() {
   const distPath = path.resolve(__dirname, '../dist');
   
-  // Start a simple local server for the built files
-  const { preview } = await import('vite');
-  const server = await preview({
-    preview: { port: 4173 }
+  // Create a simple static file server
+  const server = createServer((request, response) => {
+    return handler(request, response, {
+      public: distPath
+    });
   });
 
-  const browser = await puppeteer.launch();
+  await new Promise((resolve) => {
+    server.listen(4173, () => {
+      console.log('Server running on port 4173');
+      resolve();
+    });
+  });
+
+  let browser;
+  
+  if (isProduction) {
+    // Use puppeteer-core with chromium for Vercel
+    const puppeteerCore = await import('puppeteer-core');
+    const chromium = await import('@sparticuz/chromium');
+    
+    browser = await puppeteerCore.default.launch({
+      args: [...chromium.default.args, '--no-sandbox', '--disable-setuid-sandbox'],
+      defaultViewport: chromium.default.defaultViewport,
+      executablePath: await chromium.default.executablePath(),
+      headless: chromium.default.headless,
+    });
+  } else {
+    // Use regular puppeteer for local development
+    const puppeteer = await import('puppeteer');
+    browser = await puppeteer.default.launch({
+      headless: true
+    });
+  }
   
   for (const route of routes) {
     const page = await browser.newPage();
     const url = `http://localhost:4173${route}`;
     
     console.log(`Pre-rendering: ${route}`);
-    await page.goto(url, { waitUntil: 'networkidle0' });
+    await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
     
     const html = await page.content();
     
@@ -48,7 +79,7 @@ async function prerender() {
   }
   
   await browser.close();
-  server.httpServer.close();
+  server.close();
   console.log('Pre-rendering complete!');
 }
 
