@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import { useLoadingContext } from '../helpers/LoadingContext';
+import { Helmet } from "react-helmet";
 import{ AirplaneTakeoff, CalendarCheck, GithubLogo, VinylRecord} from '@phosphor-icons/react'
 
 export default function ProjectsPage() {
@@ -11,7 +12,52 @@ export default function ProjectsPage() {
             },[setIsLoading])
 
     return (
-        !isLoading && <div className="relative isolate overflow-hidden bg-bground px-6 py-20 sm:py-20 lg:overflow-visible lg:px-0">
+        <>
+          <Helmet>
+            {/* Primary Meta Tags */}
+            <title>Projects | Buildtech Systems - Web Development Portfolio</title>
+            <meta
+              name="title"
+              content="Projects | Buildtech Systems - Web Development Portfolio"
+            />
+            <meta
+              name="description"
+              content="Explore Derek's web development portfolio featuring fullstack applications, e-commerce sites, and custom web solutions. Projects include MERN stack apps, React sites, and more."
+            />
+            <meta
+              name="keywords"
+              content="web development portfolio, fullstack projects, MERN stack examples, React projects, e-commerce web apps, Texas developer portfolio, custom web applications"
+            />
+
+            {/* Open Graph / Facebook */}
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.buildtechsys.com/projects" />
+            <meta
+              property="og:title"
+              content="Projects | Buildtech Systems Portfolio"
+            />
+            <meta
+              property="og:description"
+              content="Explore Derek's web development portfolio featuring fullstack applications, e-commerce sites, and custom web solutions."
+            />
+
+            {/* Twitter */}
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content="https://www.buildtechsys.com/projects" />
+            <meta
+              property="twitter:title"
+              content="Projects | Buildtech Systems Portfolio"
+            />
+            <meta
+              property="twitter:description"
+              content="Explore Derek's web development portfolio featuring fullstack applications and custom web solutions."
+            />
+
+            {/* Canonical URL */}
+            <link rel="canonical" href="https://www.buildtechsys.com/projects" />
+          </Helmet>
+          
+          {!isLoading && <div className="relative isolate overflow-hidden bg-bground px-6 py-20 sm:py-20 lg:overflow-visible lg:px-0">
                 <div className="absolute inset-0 -z-10 overflow-hidden">
                     <svg
                         aria-hidden="true"
@@ -39,15 +85,15 @@ export default function ProjectsPage() {
                     </svg>
                 </div>
                 <div className="mx-auto px-6 lg:max-w-7xl lg:px-8">
-                    <p className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+                    <h1 className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl">
                         Published Projects
-                    </p>
+                    </h1>
                     <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-10 lg:grid-cols-6 lg:grid-rows-2">
                         <div className="flex p-px lg:col-span-4">
                             <div className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]">
-                            <a href="https://www.deadfallroad.band/" target="__blank" referrerPolicy="origin">
+                            <a href="https://www.deadfallroad.band/" target="_blank" rel="noopener noreferrer">
                                 <img
-                                    alt=""
+                                    alt="Deadfall Road band website screenshot showing e-commerce music store"
                                     src="/deadfallroadScreenshot2.png"
                                     className="h-90 object-cover object-left border-b-white/15 saturate-0 hover:saturate-100 border-b"
                                 />
@@ -63,9 +109,9 @@ export default function ProjectsPage() {
                         </div>
                         <div className="flex p-px lg:col-span-2">
                             <div className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 lg:rounded-tr-[2rem]">
-                            <a href="https://github.com/DKH707" target="__blank">
+                            <a href="https://github.com/DKH707" target="_blank" rel="noopener noreferrer">
                                 <img
-                                    alt=""
+                                    alt="GitHub profile link for DKH707"
                                     src="/Github.png"
                                     className="h-90 object-cover rounded-bl-2xl border-b-white/15 border-b saturate-0 hover:saturate-100 border-l-white/15 border-l ml-auto"
                                 />
@@ -81,9 +127,9 @@ export default function ProjectsPage() {
                         </div>
                         <div className="flex p-px lg:col-span-2">
                             <div className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 lg:rounded-bl-[2rem]">
-                            <a href="https://gradparty.buildtechsys.com/" target="__blank">
+                            <a href="https://gradparty.buildtechsys.com/" target="_blank" rel="noopener noreferrer">
                                 <img
-                                    alt=""
+                                    alt="RSVP web application for graduation party event management"
                                     src="/RSVP_collage.png"
                                     className="h-80 rounded-br-2xl rounded-bl-2xl mx-auto border-b-white/15 border-b saturate-0 hover:saturate-100 border-l-white/15 border-l border-r-white/15 border-r object-cover"
                                 />
@@ -99,9 +145,9 @@ export default function ProjectsPage() {
                         </div>
                         <div className="flex p-px lg:col-span-4">
                             <div className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]">
-                            <a href="https://www.kilroy.faaoda.com/" target="__blank" referrerPolicy="origin">
+                            <a href="https://www.kilroy.faaoda.com/" target="_blank" rel="noopener noreferrer">
                                 <img
-                                    alt=""
+                                    alt="Kilroy Aviation LLC website for FAA recognized ODA"
                                     src="/KilroyScreenshot.png"
                                     className="h-90 object-cover object-right saturate-0 hover:saturate-100 border-b-white/15 border-b"
                                 />
@@ -117,6 +163,7 @@ export default function ProjectsPage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>}
+        </>
     )
 }
