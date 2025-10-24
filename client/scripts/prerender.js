@@ -5,11 +5,8 @@ import { createServer } from 'http';
 import handler from 'serve-handler';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// Detect environment
 const isProduction = process.env.VERCEL || process.env.NODE_ENV === 'production';
 
-// List your routes here
 const routes = [
   '/',
   '/about',
@@ -18,12 +15,15 @@ const routes = [
 ];
 
 async function prerender() {
-  const distPath = path.resolve(__dirname, '../');
+  const distPath = path.resolve(__dirname, '../dist');
   
-  // Create a simple static file server
+  // Create a simple static file server with SPA fallback
   const server = createServer((request, response) => {
     return handler(request, response, {
-      public: distPath
+      public: distPath,
+      rewrites: [
+        { source: "**", destination: "/index.html" }
+      ]
     });
   });
 
@@ -37,7 +37,6 @@ async function prerender() {
   let browser;
   
   if (isProduction) {
-    // Use puppeteer-core with chromium for Vercel
     const puppeteerCore = await import('puppeteer-core');
     const chromium = await import('@sparticuz/chromium');
     
@@ -48,7 +47,6 @@ async function prerender() {
       headless: chromium.default.headless,
     });
   } else {
-    // Use regular puppeteer for local development
     const puppeteer = await import('puppeteer');
     browser = await puppeteer.default.launch({
       headless: true
