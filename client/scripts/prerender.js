@@ -18,7 +18,7 @@ const routes = [
 ];
 
 async function prerender() {
-  const distPath = path.resolve(__dirname, '../dist');
+  const distPath = path.resolve(__dirname, '../');
   
   // Create a simple static file server
   const server = createServer((request, response) => {
