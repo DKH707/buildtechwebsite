@@ -10,6 +10,7 @@ const isProduction = process.env.VERCEL || process.env.NODE_ENV === 'production'
 const routes = [
   '/',
   '/about',
+  '/services',
   '/contact',
   '/projects',
 ];
