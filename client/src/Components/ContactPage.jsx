@@ -102,14 +102,17 @@ export default function ContactPage() {
             <h1 className="text-balance text-left text-4xl font-semibold tracking-tight text-text sm:text-5xl">
               Contact Derek
             </h1>
-            <p className="mt-2 text-left text-lg/8 text-text">
+            <p className="mt-2 text-left text-lg/8 text-gray-400">
               Feel free to reach out if you'd like to talk about any projects or
               future opportunities
+            </p>
+            <p className="mt-2 text-left text-lg/8 text-text">
+              Email: <a className="hover:text-accent transition-all" href="mailto:dhopkins@buildtechsys.com">dhopkins@buildtechsys.com</a>
             </p>
           </div>
           <div className="mx-auto">
             <ContactForm/>
-            <div className="mx-auto max-w-4xl">
+            {/* <div className="mx-auto max-w-4xl">
               <dl className="mt-16 divide-y divide-white/10">
                 {faqs.map((faq) => (
                   <div key={faq.question} className="py-6 text-left">
@@ -133,7 +136,7 @@ export default function ContactPage() {
                   </div>
                 ))}
               </dl>
-            </div>
+            </div>*/}
           </div>
         </div>
       )}

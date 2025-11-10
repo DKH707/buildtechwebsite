@@ -7,6 +7,7 @@ import EspressoLoader from './EspressoLoader';
 const navigation = [
   { name: 'Home', href: '/', icon: HouseLine },
   { name: 'About Derek', href: '/about', icon: UserFocus },
+  { name: 'Services', href: '/services', icon: List },
   { name: 'Projects', href: '/projects', icon: Database },
   { name: 'Contact', href: '/contact', icon: PaperPlaneTilt },
 ];
