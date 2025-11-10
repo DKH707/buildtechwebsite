@@ -49,6 +49,8 @@ export default function Navigation() {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const year = new Date().getFullYear()
+  
   return (
     <div className="flex h-screen flex-col bg-bground">
       {/* Top bar */}
@@ -127,9 +129,9 @@ export default function Navigation() {
                 </ul>
               </li>
               <li className="mt-auto max-sm:my-auto">
-                <img src='/derek_cropped.jpg' className='rounded-full size-20 mx-auto'></img>
+                <img src='/SquareLogo.png' className='size-20 mx-auto'></img>
                 <div className="text-xs text-gray-400 px-2 pt-4">
-                  © 2025 Buildtech Systems
+                  © {year} Buildtech Systems, LLC
                 </div>
               </li>
             </ul>
