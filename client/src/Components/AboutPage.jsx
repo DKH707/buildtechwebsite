@@ -113,8 +113,7 @@ export default function AboutPage() {
               <div className="lg:pr-4">
                 <div className="max-w-xl text-lg text-text lg:max-w-lg">
                   <p>
-                    I'm a born and raised Texan that has been on God's green Earth
-                    for the past 23 years. I've grown up around tech my whole
+                    I'm a born and raised Texan that has grown up around tech my whole
                     life, getting my first computer around the age of 10. From
                     that point on, a passion was born. I built my first computer
                     at 14, and realized that was something incredibly fun and
