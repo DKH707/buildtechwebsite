@@ -173,7 +173,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="mx-auto px-6 lg:max-w-7xl lg:px-8">
-            <h1 className="max-w-lg text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+            <h1 className="text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl">
               Our Services
             </h1>
             {/* <p className="mt-4 text-lg text-gray-400 max-w-2xl">
@@ -225,7 +225,7 @@ export default function ServicesPage() {
                           href="/contact"
                           className="mt-auto inline-flex items-center gap-2 bg-accent hover:bg-accent/80 text-black font-semibold px-6 py-3 rounded-lg transition-colors w-full justify-center"
                         >
-                          Get Started
+                          Contact for Details
                           <ArrowRight weight="bold" size={16} />
                         </a>
                       </div>
@@ -290,9 +290,9 @@ export default function ServicesPage() {
               <div className="mt-20">
                 <h2 className="text-3xl font-semibold text-text mb-2 inline-flex items-center">
                   <Clock weight="duotone" size={32} className="text-accent mr-2" />
-                  Hourly Consulting
+                  Hourly Rates
                 </h2>
-                <p className="text-gray-400 mb-8">Flexible hourly rates for ongoing work and consulting</p>
+                <p className="text-gray-400 mb-8">Hourly development and consultation rates</p>
                 
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                   {hourlyServices.map((service) => (
