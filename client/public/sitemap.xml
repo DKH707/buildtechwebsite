@@ -13,6 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://buildtechsys.com/services</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://buildtechsys.com/contact</loc>
     <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
