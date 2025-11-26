@@ -12,9 +12,12 @@ export default {
       colors: {
         'text': '#ffffff',
         'bground':'#0c0b0b',
-        'primary': '#ad252a',
+        'primary': '#cd252a',
         'secondary': '#7e552b',
-        'accent': '#bf8e43'
+        'accent': '#BF8E43',
+        'gold-dark': '#9A7310',
+        'gold': '#BF8E43',
+        'gold-light': '#D4A373'
       },
       width: {
         '7xl': '80rem'

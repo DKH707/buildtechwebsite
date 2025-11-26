@@ -128,7 +128,7 @@ export default function HomePage() {
                 clipPath:
                   "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
               }}
-              className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-accent to-primary opacity-30"
+              className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-primary to-gold opacity-30"
             />
           </div>
           <div className="mx-auto max-w-7xl px-6 sm:pb-32 max-sm:h-[calc(100vh-52px)] lg:flex lg:px-8 lg:py-20">
@@ -146,7 +146,7 @@ export default function HomePage() {
                                 </span>
                             </a> */}
               </div>
-              <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
+              <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight bg-gradient-to-r from-primary via-white to-gold bg-clip-text text-transparent sm:text-6xl">
                 Don't just build tech
               </h1>
               <div className="relative mt-10">
@@ -164,20 +164,20 @@ export default function HomePage() {
                 <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
                   
                 </h1>
-                <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-primary sm:text-6xl">
+                <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-primary drop-shadow-[0_0_6px_rgba(205,37,42,0.2)] sm:text-6xl">
                   &nbsp;buildtechsys
                 </h1>
               </div>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+              <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
                 Web Apps | Mobile Apps | Tech Consulting{" "}
               </p>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+              <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
                 Serving Crowley, Burleson, Fort Worth, Joshua{" "}
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="/contact"
-                  className="rounded-md bg-secondary px-3.5 py-2.5 text-md font-semibold text-text shadow-sm hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
+                  className="rounded-md bg-primary px-3.5 py-2.5 text-md font-semibold text-white shadow-lg shadow-primary/15 hover:bg-primary/80 hover:shadow-xl hover:shadow-primary/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-300 ease-in-out"
                 >
                   Let's work together!
                 </a>
