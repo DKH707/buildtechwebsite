@@ -54,11 +54,11 @@ export default function Navigation() {
   return (
     <div className="flex h-screen flex-col bg-bground">
       {/* Top bar */}
-      <header className="bg-bground border-b border-secondary p-4 flex items-center justify-between z-10">
+      <header className="bg-bground border-b border-gold-dark p-4 flex items-center justify-between z-10">
         <div className="flex items-center">
           <button
             type="button"
-            className="text-white p-2 rounded-md hover:bg-accent"
+            className="text-white p-2 rounded-md hover:bg-primary/20 hover:shadow-md hover:shadow-primary/15 transition-all duration-300 ease-in-out"
             onClick={toggleSidebar}
           >
             {sidebarOpen ? <X size='1.5rem' weight='light' /> : <List size='1.5rem' weight='light' />}
@@ -72,7 +72,7 @@ export default function Navigation() {
           </a>
           <div className='inline-flex'>
             <h1 className="text-white text-xl font-semibold ml-4 hidden sm:block">Buildtech</h1>
-            <h1 className="text-accent text-xl font-semibold hidden sm:block">&nbsp;Systems</h1>
+            <h1 className="text-primary text-xl font-semibold hidden sm:block drop-shadow-[0_0_4px_rgba(205,37,42,0.2)]">&nbsp;Systems</h1>
           </div>
         </div>
         <div className="flex items-center gap-4">
@@ -84,7 +84,7 @@ export default function Navigation() {
         {/* Sidebar navigation */}
         <aside
           className={classNames(
-            'bg-bground border-r border-secondary transition-all duration-300 ease-in-out z-10',
+            'bg-bground border-r border-gold-dark transition-all duration-300 ease-in-out z-10',
             sidebarOpen ? 'w-64' : 'w-0',
             isMobile ? 'fixed h-full' : 'relative'
           )}
@@ -104,9 +104,9 @@ export default function Navigation() {
                         className={({ isActive }) =>
                           classNames(
                             isActive
-                              ? 'bg-accent text-white'
-                              : 'text-white hover:bg-accent hover:text-white',
-                            'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold'
+                              ? 'bg-primary text-white shadow-md shadow-primary/20'
+                              : 'text-white hover:bg-primary/20 hover:shadow-md hover:shadow-primary/15',
+                            'group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold transition-all duration-300 ease-in-out'
                           )
                         }
                         onClick={() => isMobile && setSidebarOpen(false)}
@@ -116,8 +116,8 @@ export default function Navigation() {
                             <item.icon
                               aria-hidden="true"
                               className={classNames(
-                                isActive ? 'text-white' : 'text-primary group-hover:text-white',
-                                'h-6 w-6 shrink-0'
+                                isActive ? 'text-white drop-shadow-[0_0_3px_rgba(255,255,255,0.4)]' : 'text-primary group-hover:text-primary',
+                                'h-6 w-6 shrink-0 transition-colors duration-300'
                               )}
                             />
                             <span className="whitespace-nowrap">{item.name}</span>
