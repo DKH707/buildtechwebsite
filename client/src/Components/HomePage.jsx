@@ -147,7 +147,7 @@ export default function HomePage() {
                             </a> */}
               </div>
               <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
-                I don't just build tech
+                Don't just build tech
               </h1>
               <div className="relative mt-10">
                 <div
@@ -162,7 +162,7 @@ export default function HomePage() {
               </div>
               <div className="inline-flex">
                 <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-text sm:text-6xl">
-                  I
+                  
                 </h1>
                 <h1 className="mt-10 text-pretty lowercase text-5xl font-semibold tracking-tight text-primary sm:text-6xl">
                   &nbsp;buildtechsys
@@ -170,6 +170,9 @@ export default function HomePage() {
               </div>
               <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
                 Web Apps | Mobile Apps | Tech Consulting{" "}
+              </p>
+              <p className="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+                Serving Crowley, Burleson, Fort Worth, Joshua{" "}
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
