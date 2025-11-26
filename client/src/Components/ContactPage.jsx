@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
 import { useLoadingContext } from "../helpers/LoadingContext";
 import { Helmet } from "react-helmet";
-import {
-  At,
-  GithubLogo,
-  LinkedinLogo,
-} from "@phosphor-icons/react";
+import { At, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import ContactForm from "./ContactForm";
+import { EnvelopeSimple, MapPin } from "@phosphor-icons/react/dist/ssr";
 
 const faqs = [
   {
@@ -31,7 +28,7 @@ const faqs = [
 
 export default function ContactPage() {
   const { isLoading, setIsLoading } = useLoadingContext();
-  
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -58,11 +55,11 @@ export default function ContactPage() {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.buildtechsys.com/contact" />
         <meta
-          property="og:title"
-          content="Contact Derek | Buildtech Systems"
+          property="og:url"
+          content="https://www.buildtechsys.com/contact"
         />
+        <meta property="og:title" content="Contact Derek | Buildtech Systems" />
         <meta
           property="og:description"
           content="Get in touch with Derek at Buildtech Systems. Let's discuss your web development, mobile app, or tech consulting needs."
@@ -70,7 +67,10 @@ export default function ContactPage() {
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.buildtechsys.com/contact" />
+        <meta
+          property="twitter:url"
+          content="https://www.buildtechsys.com/contact"
+        />
         <meta
           property="twitter:title"
           content="Contact Derek | Buildtech Systems"
@@ -83,7 +83,7 @@ export default function ContactPage() {
         {/* Canonical URL */}
         <link rel="canonical" href="https://www.buildtechsys.com/contact" />
       </Helmet>
-      
+
       {!isLoading && (
         <div className="isolate bg-bground px-6 py-20 sm:py-20">
           <div
@@ -100,18 +100,38 @@ export default function ContactPage() {
           </div>
           <div className="mx-auto px-6 lg:max-w-7xl lg:px-8">
             <h1 className="text-balance text-left text-4xl font-semibold tracking-tight text-text sm:text-5xl">
-              Contact Derek
+              Contact Buildtech
             </h1>
             <p className="mt-2 text-left text-lg/8 text-gray-400">
-              Feel free to reach out if you'd like to talk about any projects or
-              future opportunities
+              Reach out to get your project started!
             </p>
             <p className="mt-2 text-left text-lg/8 text-text">
-              Email: <a className="hover:text-accent transition-all" href="mailto:dhopkins@buildtechsys.com">dhopkins@buildtechsys.com</a>
+              <span className="inline-flex items-center">
+                <EnvelopeSimple size="2rem"/>
+                &nbsp;
+                <a
+                  className="hover:text-accent transition-all"
+                  target="_blank"
+                  href="mailto:dhopkins@buildtechsys.com"
+                >
+                  dhopkins@buildtechsys.com
+                </a>
+              </span>
+            </p>
+            <p className="mt-2 text-left text-lg/8 text-text">
+              <span className="inline-flex items-center">
+                <MapPin size="2rem"/>&nbsp;
+                <a
+                  className="hover:text-accent transition-all"
+                  target="_blank"
+                  href="https://maps.app.goo.gl/cMC4S1RNJfjC1LnC8"
+                >
+                  3908 Williamson Rd Ste 110 <br/> Crowley, TX 76036                </a>
+              </span>
             </p>
           </div>
           <div className="mx-auto">
-            <ContactForm/>
+            <ContactForm />
             {/* <div className="mx-auto max-w-4xl">
               <dl className="mt-16 divide-y divide-white/10">
                 {faqs.map((faq) => (
