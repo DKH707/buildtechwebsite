@@ -96,7 +96,7 @@ export default function AboutPage() {
                   <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl">
                     Hey, I'm Derek
                   </h1>
-                  <p className="mt-6 text-xl/8 text-accent">
+                  <p className="mt-6 text-xl/8 text-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]">
                     Owner of Buildtech Systems{" "}
                   </p>
                 </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                     was definitely fulfilling, academically. I met a lot of great
                     friends and mentors during this chapter of my life as well.
                   </p>
-                  <h2 className="mt-8 text-2xl tracking-tight text-accent">
+                  <h2 className="mt-8 text-2xl tracking-tight text-gold">
                     The Present
                   </h2>
                   <p className="mt-6">

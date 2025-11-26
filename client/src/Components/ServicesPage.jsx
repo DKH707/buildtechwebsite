@@ -184,22 +184,23 @@ export default function ServicesPage() {
             {servicePackages && servicePackages.length > 0 && (
               <div className="mt-16">
                 <h2 className="text-3xl font-semibold text-text mb-2 inline-flex items-center">
-                  <Package weight="duotone" size={32} className="text-accent mr-2" />
+                  <Package weight="duotone" size={32} className="text-gold drop-shadow-[0_0_6px_rgba(191,142,67,0.15)] mr-2" />
                   Website Packages
                 </h2>
-                <p className="text-gray-400 mb-8">Fixed-price packages for complete website solutions</p>
+                <p className="text-gray-300 mb-8">Fixed-price packages for complete website solutions</p>
                 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {servicePackages.map((pkg) => (
                     <div
                       key={pkg._id}
-                      className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 hover:ring-accent/50 transition-all duration-300 flex flex-col"
+                      className="group overflow-hidden rounded-lg bg-gradient-to-br from-white/[0.02] via-bground to-bground ring-1 ring-white/10 hover:ring-1 hover:ring-gold/20 hover:shadow-xl hover:shadow-gold/10 hover:-translate-y-1 transform transition-all duration-300 ease-out flex flex-col relative"
                     >
-                      <div className="p-8 flex flex-col flex-grow">
-                        <h3 className="text-xl font-semibold text-white">{pkg.name}</h3>
-                        <p className="mt-4 text-3xl font-bold text-accent">
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-full" />
+                      <div className="p-8 flex flex-col flex-grow relative z-10">
+                        <h3 className="text-2xl font-bold text-white group-hover:text-gold transition-colors duration-300">{pkg.name}</h3>
+                        <p className="mt-4 text-4xl font-bold text-gold drop-shadow-[0_0_8px_rgba(191,142,67,0.2)] group-hover:drop-shadow-[0_0_12px_rgba(191,142,67,0.3)] transition-all duration-300">
                           ${pkg.startingPrice.toLocaleString()}
-                          <span className="text-base font-normal text-gray-400"> starting</span>
+                          <span className="text-base font-normal text-gray-300"> starting</span>
                         </p>
                         
                         {pkg.idealFor && (
@@ -208,13 +209,13 @@ export default function ServicesPage() {
                           </p>
                         )}
 
-                        <p className="mt-4 text-gray-400">{pkg.description}</p>
+                        <p className="mt-4 text-gray-300">{pkg.description}</p>
                         <div className='pb-8'>
                         {pkg.features && pkg.features.length > 0 && (
                           <ul className="mt-6 space-y-3">
                             {pkg.features.map((feature, idx) => (
                               <li key={idx} className="flex items-start gap-2 text-sm text-gray-300">
-                                <CheckCircle weight="fill" size={20} className="text-accent mt-0.5 flex-shrink-0" />
+                                <CheckCircle weight="fill" size={20} className="text-gold mt-0.5 flex-shrink-0" />
                                 <span>{feature}</span>
                               </li>
                             ))}
@@ -223,7 +224,7 @@ export default function ServicesPage() {
                         </div>
                         <a
                           href="/contact"
-                          className="mt-auto inline-flex items-center gap-2 bg-accent hover:bg-accent/80 text-black font-semibold px-6 py-3 rounded-lg transition-colors w-full justify-center"
+                          className="mt-auto inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/80 font-semibold px-6 py-3 rounded-lg shadow-lg shadow-primary/15 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 ease-in-out w-full justify-center"
                         >
                           Contact for Details
                           <ArrowRight weight="bold" size={16} />
@@ -239,10 +240,10 @@ export default function ServicesPage() {
             {Object.keys(groupedAddOns).length > 0 && (
               <div className="mt-20">
                 <h2 className="text-3xl font-semibold text-text mb-2 inline-flex items-center">
-                  <PuzzlePiece weight="duotone" size={32} className="text-accent mr-2" />
+                  <PuzzlePiece weight="duotone" size={32} className="text-gold drop-shadow-[0_0_6px_rgba(191,142,67,0.15)] mr-2" />
                   Add-On Services
                 </h2>
-                <p className="text-gray-400 mb-8">Enhance your website with additional features <br></br>*monthly pricing</p>
+                <p className="text-gray-300 mb-8">Enhance your website with additional features <br></br>*monthly pricing</p>
 
                 {Object.entries(groupedAddOns).map(([category, addons]) => (
                   <div key={category} className="mb-10">
@@ -251,22 +252,22 @@ export default function ServicesPage() {
                       {addons.map((addon) => (
                         <div
                           key={addon._id}
-                          className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 p-6 hover:ring-accent/50 transition-all duration-300"
+                          className="group overflow-hidden rounded-lg bg-bground ring-1 ring-white/10 p-6 hover:ring-gold/15 hover:shadow-md hover:shadow-gold/8 transform hover:-translate-y-0.5 transition-all duration-300"
                         >
-                          <h4 className="text-lg font-semibold text-white">{addon.name}</h4>
-                          <p className="mt-2 text-accent font-bold">
-                            {addon.priceMax 
+                          <h4 className="text-lg font-semibold text-white group-hover:text-gold/90 transition-colors duration-300">{addon.name}</h4>
+                          <p className="mt-2 text-gold font-bold">
+                            {addon.priceMax
                               ? `*$${addon.priceMin.toLocaleString()} - $${addon.priceMax.toLocaleString()}`
                               : `$${addon.priceMin.toLocaleString()}+`
                             }
                           </p>
-                          <p className="mt-3 text-sm text-gray-400">{addon.description}</p>
+                          <p className="mt-3 text-sm text-gray-300">{addon.description}</p>
                           
                           {addon.features && addon.features.length > 0 && (
                             <ul className="mt-4 space-y-2">
                               {addon.features.slice(0, 3).map((feature, idx) => (
                                 <li key={idx} className="flex items-start gap-2 text-xs text-gray-300">
-                                  <CheckCircle weight="fill" size={16} className="text-accent mt-0.5 flex-shrink-0" />
+                                  <CheckCircle weight="fill" size={16} className="text-gold mt-0.5 flex-shrink-0" />
                                   <span>{feature}</span>
                                 </li>
                               ))}
@@ -289,23 +290,23 @@ export default function ServicesPage() {
             {hourlyServices && hourlyServices.length > 0 && (
               <div className="mt-20">
                 <h2 className="text-3xl font-semibold text-text mb-2 inline-flex items-center">
-                  <Clock weight="duotone" size={32} className="text-accent mr-2" />
+                  <Clock weight="duotone" size={32} className="text-gold drop-shadow-[0_0_6px_rgba(191,142,67,0.15)] mr-2" />
                   Hourly Rates
                 </h2>
-                <p className="text-gray-400 mb-8">Hourly development and consultation rates</p>
+                <p className="text-gray-300 mb-8">Hourly development and consultation rates</p>
                 
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                   {hourlyServices.map((service) => (
                     <div
                       key={service._id}
-                      className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 p-6 hover:ring-accent/50 transition-all duration-300"
+                      className="group overflow-hidden rounded-lg bg-bground ring-1 ring-white/10 p-6 hover:ring-gold/15 hover:shadow-md hover:shadow-gold/8 transform hover:-translate-y-0.5 transition-all duration-300"
                     >
-                      <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                      <p className="mt-2 text-2xl font-bold text-accent">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-gold/90 transition-colors duration-300">{service.name}</h3>
+                      <p className="mt-2 text-2xl font-bold text-gold">
                         ${service.hourlyRate}
-                        <span className="text-base font-normal text-gray-400">/hour</span>
+                        <span className="text-base font-normal text-gray-300">/hour</span>
                       </p>
-                      <p className="mt-3 text-sm text-gray-400">{service.description}</p>
+                      <p className="mt-3 text-sm text-gray-300">{service.description}</p>
                     </div>
                   ))}
                 </div>
@@ -313,10 +314,10 @@ export default function ServicesPage() {
             )}
 
             {/* Maintenance Note */}
-            <div className="mt-20 p-8 rounded-lg bg-primary/10 ring-1 ring-white/15">
+            <div className="mt-20 p-8 rounded-lg bg-bground ring-1 ring-white/15">
               <h3 className="text-xl font-semibold text-white mb-2">Ongoing Maintenance</h3>
-              <p className="text-gray-400">
-                Website maintenance and support services are available on a case-by-case basis. 
+              <p className="text-gray-300">
+                Website maintenance and support services are available on a case-by-case basis.
                 Contact us to discuss your specific maintenance needs and we'll create a custom plan that works for you.
               </p>
             </div>
@@ -326,13 +327,13 @@ export default function ServicesPage() {
               <h2 className="text-3xl font-bold text-text mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss how we can help transform your business with the right technology solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/80 text-black font-semibold px-8 py-3 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary/80 font-semibold px-8 py-3 rounded-lg shadow-lg shadow-primary/15 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 ease-in-out"
                 >
                   Schedule a Consultation
                   <ArrowRight weight="bold" size={16} />

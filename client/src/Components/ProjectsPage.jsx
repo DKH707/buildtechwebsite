@@ -90,7 +90,7 @@ export default function ProjectsPage() {
                     </h1>
                     <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-10 lg:grid-cols-6 lg:grid-rows-2">
                         <div className="flex p-px lg:col-span-4">
-                            <div className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]">
+                            <div className="overflow-hidden rounded-lg bg-bground ring-1 ring-white/15 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]">
                             <a href="https://www.deadfallroad.band/" target="_blank" rel="noopener noreferrer">
                                 <img
                                     alt="Deadfall Road band website screenshot showing e-commerce music store"
@@ -99,16 +99,16 @@ export default function ProjectsPage() {
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><VinylRecord weight="duotone" size="24"/>&nbsp;Deadfall Road</h3>
+                                    <h3 className="text-sm/4 font-semibold text-gold items-center inline-flex"><VinylRecord weight="duotone" size="24"/>&nbsp;Deadfall Road</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Fullstack E-Commerce Web App</p>
-                                    <p className="mt-2 text-sm/6 text-gray-400">
+                                    <p className="mt-2 text-sm/6 text-gray-300">
                                         Web Application built for a Memphis, TN band to sell digital copies of their latest CDs. This application utilizes the MERN stack, Snipcart, and Vercel
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div className="flex p-px lg:col-span-2">
-                            <div className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 lg:rounded-tr-[2rem]">
+                            <div className="overflow-hidden rounded-lg bg-bground ring-1 ring-white/15 lg:rounded-tr-[2rem]">
                             <a href="https://github.com/DKH707" target="_blank" rel="noopener noreferrer">
                                 <img
                                     alt="GitHub profile link for DKH707"
@@ -117,16 +117,16 @@ export default function ProjectsPage() {
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><GithubLogo weight='duotone' size='24'/>&nbsp;Github</h3>
+                                    <h3 className="text-sm/4 font-semibold text-gold items-center inline-flex"><GithubLogo weight='duotone' size='24'/>&nbsp;Github</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Check out any of my public repositories</p>
-                                    <p className="mt-2 text-sm/6 text-gray-400">
+                                    <p className="mt-2 text-sm/6 text-gray-300">
                                         Not everything I've done is showcased here, I've got more on my Github
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div className="flex p-px lg:col-span-2">
-                            <div className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 lg:rounded-bl-[2rem]">
+                            <div className="overflow-hidden rounded-lg bg-bground ring-1 ring-white/15 lg:rounded-bl-[2rem]">
                             <a href="https://gradparty.buildtechsys.com/" target="_blank" rel="noopener noreferrer">
                                 <img
                                     alt="RSVP web application for graduation party event management"
@@ -135,16 +135,16 @@ export default function ProjectsPage() {
                                 />
                             </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><CalendarCheck weight='duotone' size="24"/>&nbsp;RSVP Web App</h3>
+                                    <h3 className="text-sm/4 font-semibold text-gold items-center inline-flex"><CalendarCheck weight='duotone' size="24"/>&nbsp;RSVP Web App</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Event App built with the MERN Stack</p>
-                                    <p className="mt-2 max-w-lg text-sm/6 text-gray-400">
+                                    <p className="mt-2 max-w-lg text-sm/6 text-gray-300">
                                         Web application utilized for my university graduation party, distributed via QR Code
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div className="flex p-px lg:col-span-4">
-                            <div className="overflow-hidden rounded-lg bg-primary/10 ring-1 ring-white/15 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]">
+                            <div className="overflow-hidden rounded-lg bg-bground ring-1 ring-white/15 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]">
                             <a href="https://www.kilroy.faaoda.com/" target="_blank" rel="noopener noreferrer">
                                 <img
                                     alt="Kilroy Aviation LLC website for FAA recognized ODA"
@@ -153,9 +153,9 @@ export default function ProjectsPage() {
                                 />
                                 </a>
                                 <div className="p-10">
-                                    <h3 className="text-sm/4 font-semibold text-accent items-center inline-flex"><AirplaneTakeoff  weight='duotone' size='24'/>&nbsp;Kilroy Aviation, LLC</h3>
+                                    <h3 className="text-sm/4 font-semibold text-gold items-center inline-flex"><AirplaneTakeoff  weight='duotone' size='24'/>&nbsp;Kilroy Aviation, LLC</h3>
                                     <p className="mt-2 text-lg font-medium tracking-tight text-white">Website for a recognized ODA of the FAA</p>
-                                    <p className="mt-2 text-sm/6 text-gray-400">
+                                    <p className="mt-2 text-sm/6 text-gray-300">
                                         This site being my earliest production site, I built it in Squarespace. Still requires updating and meetings with the team occasionally
                                     </p>
                                 </div>
