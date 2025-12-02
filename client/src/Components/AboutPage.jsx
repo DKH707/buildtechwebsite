@@ -96,9 +96,16 @@ export default function AboutPage() {
                   <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-text sm:text-5xl">
                     Hey, I'm Derek
                   </h1>
-                  <p className="mt-6 text-xl/8 text-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]">
-                    Owner of Buildtech Systems{" "}
+                  <p className="my-6 text-xl/8 text-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]">
+                    Owner of Buildtech Systems
                   </p>
+                  <a
+                    href="https://dhop.dev"
+                    target="_blank"
+                    className="rounded-md bg-primary px-3.5 py-2.5 text-md font-semibold text-white shadow-lg shadow-primary/15 hover:bg-primary/80 hover:shadow-xl hover:shadow-primary/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-300 ease-in-out"
+                  >
+                    Personal Developer Site
+                  </a>
                 </div>
               </div>
             </div>
